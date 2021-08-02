@@ -1,0 +1,49 @@
+
+.brand-image {
+    float: none !important;
+    line-height: .8 !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-top: -3px !important;
+    max-height: 45px !important;
+    width: 230px !important;
+}
+
+.btn-xs{
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+.note-editor.note-frame .note-editing-area .note-editable {
+    min-height: 120px !important;
+    padding: 5px !important;
+    overflow: auto;
+    color: #000;
+    word-wrap: break-word;
+    background-color: #fff;
+}
+.table_image{
+    width: 70px;
+}
+.portfolio_image_edit{
+    width: 130px !important;
+    height: 88px !important;
+}
+
+.profile_image_edit{
+    width: 130px !important;
+    height: 80px !important;
+}
+.file_input_sm{
+    font-size: 11px;
+}
+.user_small_image_admin{
+    height: 30px;
+    width: 30px;
+    margin: 5px 20px 0px 10px;
+}
+.user_image_admin{
+    height:100px;
+    width: 100px;
+}
