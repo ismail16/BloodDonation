@@ -1,8 +1,5 @@
 @include('admin.partials.header')
 <div class="login-box">
-    <!-- <div class="login-logo">
-        <a href="#"><b>Admin</b></a>
-    </div> -->
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">Sign in to start your session</p>

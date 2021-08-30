@@ -1,8 +1,10 @@
-@include('admin.partials.header')
-<div class="login-box">
-<!--<div class="login-logo">
-    <a href="#"><b>Admin</b></a>
-</div>-->
+@extends('frontend.layouts.master')
+@section('title','Welcome to Blood Donation')
+
+@section('content')
+<div class="container">
+<div class="row d-flex justify-content-center pb-5 mb-5">
+<div class="col-sm-12 col-md-6 col-lg-4 mt-5 mb-5">
 <div class="card">
     <div class="card-body login-card-body">
         <p class="login-box-msg">Sign in to start your session</p>
@@ -51,3 +53,6 @@
     </div>
 </div>
 </div>
+</div>
+</div>
+@endsection
