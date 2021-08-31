@@ -29,26 +29,26 @@
 
 		<li class="nav-item dropdown">
 			<a href="#" class="_dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-				<img src="{{ asset('backend_assets/dist/img/AdminLTELogo.png')}}" class="user-image img-circle user_small_image_admin" alt="User Image" style="height: 40px;">
+				<img src="{{ asset('images/profile_image/default.jpg') }}" class="user-image img-circle user_small_image_admin" alt="User Image" style="height: 40px;">
 			</a>
 			<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 				<span class="dropdown-item dropdown-header">
-					<img src="{{ asset('backend_assets/dist/img/AdminLTELogo.png')}}" class="img-circle user_image_admin" alt="User Image">
+					<img src="{{ asset('images/profile_image/default.jpg') }}" class="img-circle user_image_admin" alt="User Image">
 					<h4>Name</h4>
 					<p>
 						Admin 
 					</p>
 				</span>
 				<div class="dropdown-divider"></div>
-				<div class="container">
-					<div class="row">
+				<div class="container d-flex justify-content-center">
+					<div class="row w-100">
 						<div class="d-flex justify-content-start w-50">
 							<a href="#" class="btn btn-default btn-flat">Profile</a>
 						</div>
 						<div class="d-flex justify-content-end w-50">
 							<form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
 								@csrf
-								<button type="submit" class="btn btn-default btn-flat">Sign out</button>
+								<button type="submit" class="btn btn-default text-danger btn-flat">Sign out</button>
 							</form>
 						</div>
 					</div>

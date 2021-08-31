@@ -10,18 +10,16 @@ Route::get('/student-login', 'Frontend\PagesController@student_login')->name('st
 
 Auth::routes();
 
-
-
 //Admin Route
 Route::group(['as'=>'admin.', 'prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth','admin']], function(){
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('profile', 'DashboardController@profile')->name('profile');
+    Route::resource('user', 'UserController');
     Route::resource('division', 'DivisionController');
     Route::resource('district', 'DistrictController');
     Route::resource('thana', 'ThanaController');
     Route::resource('slider', 'SliderController');
     Route::resource('staff', 'StaffController');
-    Route::resource('event', 'EventController');
 });
 
 //Student Route

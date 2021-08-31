@@ -14,6 +14,12 @@
                     </a>
                 </li>
                 <li class="nav-item has-treeview">
+                    <a href="{{route('admin.user.index')}}" class="nav-link {{Request::is('admin/user*')?'active':''}}">
+                        <i class="nav-icon fa fa-puzzle-piece"></i>
+                        <p>Users</p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
                     <a href="{{route('admin.division.index')}}" class="nav-link {{Request::is('admin/division*')?'active':''}}">
                         <i class="nav-icon fa fa-puzzle-piece"></i>
                         <p>Division</p>

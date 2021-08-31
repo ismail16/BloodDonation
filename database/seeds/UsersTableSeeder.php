@@ -19,6 +19,7 @@ class UsersTableSeeder extends Seeder
             'division' => 'Dhaka',
             'district' => 'Tangail',
             'thana' => 'Mirzapur',
+            'status' => 1,
             'password' => bcrypt('11111111'),
         ]);
 
@@ -34,6 +35,7 @@ class UsersTableSeeder extends Seeder
             'division' => 'Dhaka',
             'district' => 'Tangail',
             'thana' => 'Mirzapur',
+            'status' => 1,
             'password' => bcrypt('22222222'),
         ]);
     }
