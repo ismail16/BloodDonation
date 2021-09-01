@@ -30,17 +30,24 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <a href="{{route('admin.division.index')}}" class="btn btn-sm btn-primary"> <i class="fa fa-list"></i> All Division</a>
-                    <form action="{{route('admin.division.store')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{route('admin.district.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>Name</label>
+                                    <label class="mb-0">Division</label>
+                                    <select name="division_id" class="form-control form-control-sm">
+                                        @foreach($divisions as $division)
+                                        <option value="{{ $division->id }}">{{ $division->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="mb-0">Name</label>
                                     <input type="text" name="name" class="form-control form-control-sm" required/>
                                 </div>
                                 <div class="col-md-6">
-                                    <label>Name Bangla</label>
+                                    <label class="mb-0">Name Bangla</label>
                                     <input type="text" name="phone" class="form-control form-control-sm" required/>
                                 </div>
                             </div>
@@ -54,10 +61,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- /.row -->
                         </div>
                         <div class="box-footer">
                             <button type="submit" class="btn btn-sm btn-primary pull-right"><i class="fa fa-check-circle"></i> Save</button>
+                            <a href="{{route('admin.district.index')}}" class="btn btn-sm btn-default pull-right"><i class="fa fa-remove"></i> Cancel</a>
                         </div>
                     </form>
                 </div>

@@ -22,39 +22,20 @@ class DivisionController extends Controller
 
     public function store(Request $request)
     {
+
         $this->validate($request, [
           'name' => 'required',
-          'department' => 'required',
-          'designation' => 'required'
         ]);
 
-        // name mobile email department designation profile_image facebook twitter instagram linkedin status
-
-        $team_member = new TeamMember;
-
-        $image = $request->file('profile_image');
-        $slug = Str::slug($request->name, '-');
-        if (isset($image)){
-            $imagename = $slug.'-'.uniqid().'.'.$image->getClientOriginalExtension();
-            if (!file_exists('images/profile')){
-                mkdir('images/profile', 777, true);
-            }
-            $image->move('images/profile',$imagename);
-            $team_member->profile_image = $imagename;
-        }
-        $team_member->name = $request->name;
-        $team_member->department = $request->department;
-        $team_member->designation = $request->designation;
-        $team_member->facebook = $request->facebook;
-        $team_member->twitter = $request->twitter;
-        $team_member->instagram = $request->instagram;
-        $team_member->linkedin = $request->linkedin;
-        $team_member->status = $request->status;
-        $team_member->serial_no = $request->serial_no;
+        $division = new Division;
+        $division->name = $request->name;
+        $division->name_bn = $request->name_bn;
+        $division->slug = $request->name;
+        $division->status = $request->status;
 
         try{
-            $team_member->save();
-            return redirect()->route('admin.team-member.index')->with('message', 'Team Member Saved Successfully !');
+            $division->save();
+            return redirect()->route('admin.division.index')->with('message', 'Division Saved Successfully !');
         }catch (\Exception $exception){
             return back()->with('danger', 'Something went wrong !');
         }
@@ -75,38 +56,18 @@ class DivisionController extends Controller
     {
         $this->validate($request, [
           'name' => 'required',
-          'department' => 'required',
-          'designation' => 'required'
         ]);
 
-        $team_member = TeamMember::find($id);
+        $division = Division::find($id);
 
-        $image = $request->file('profile_image');
-        $slug = Str::slug($request->title,'-');
-        if (isset($image)){
-            if ($team_member->profile_image) {
-                if (file_exists('images/profile/'.$team_member->profile_image)){
-                    unlink('images/profile/'.$team_member->profile_image);
-                }
-            }
-            $profile_imagename = $slug.'-'.uniqid().'.'.$image->getClientOriginalExtension();
-            $image->move('images/profile',$profile_imagename);
-            $team_member->profile_image = $profile_imagename;
-        }
-
-        $team_member->name = $request->name;
-        $team_member->department = $request->department;
-        $team_member->designation = $request->designation;
-        $team_member->facebook = $request->facebook;
-        $team_member->twitter = $request->twitter;
-        $team_member->instagram = $request->instagram;
-        $team_member->linkedin = $request->linkedin;
-        $team_member->status = $request->status;
-        $team_member->serial_no = $request->serial_no;
+        $division->name = $request->name;
+        $division->name_bn = $request->name_bn;
+        $division->slug = $request->name;
+        $division->status = $request->status;
         
         try{
-            $team_member->save();
-            return redirect()->route('admin.team-member.index')->with('message', 'Team Member Updated Successfully !');
+            $division->save();
+            return redirect()->route('admin.division.index')->with('message', 'Division Updated Successfully !');
         }catch (\Exception $exception){
             return back()->with('danger', 'Something went wrong !');
         }
@@ -114,13 +75,8 @@ class DivisionController extends Controller
 
     public function destroy($id)
     {
-        $team_member = TeamMember::find($id);
-        if ($team_member->profile_image) {
-            if (file_exists('images/profile/'.$team_member->profile_image)){
-                unlink('images/profile/'.$team_member->profile_image);
-            }
-        }
-        $team_member->delete();
-        return redirect()->route('admin.team-member.index')->with('message', 'Team Member Deleted Successfully !');
+        $Division = Division::find($id);
+        $Division->delete();
+        return redirect()->route('admin.division.index')->with('message', 'Division Deleted Successfully !');
     }
 }

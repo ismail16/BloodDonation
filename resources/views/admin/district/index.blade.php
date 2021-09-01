@@ -27,9 +27,10 @@
               <table id="dataTable" class="table table-bordered table-striped">
                 <thead>
                   <tr>
-                      <th>ID</th>
+                      <th>S.N</th>
+                      <th>Division</th>
                       <th>Name</th>
-                      <th>Experience</th>
+                      <th>Name Bangla</th>
                       <th>Status</th>
                       <th class="text-center">Action</th>
                   </tr>
@@ -37,8 +38,9 @@
                 <tbody>
                  @foreach($districts as $district)
                  <tr>
+                   <td>{{ $loop->index+1 }}</td>
+                   <td>{{$district->division_id}}</td>
                    <td>{{$district->name}}</td>
-                   <td>{{$district->name_bn}}</td>
                    <td>{{$district->name_bn}}</td>
                    <td class="text-center">
                      @if($district->status == 0)
@@ -47,7 +49,6 @@
                       <span class="badge bg-green">Active</span>
                      @endif
                    </td>
-
                     <td class="text-center">
                      <a href="{{route('admin.district.edit',$district->id)}}" class="btn btn-sm btn-info"> <i class="fa fa-edit"></i> </a>
                      <form action="{{route('admin.district.destroy', $district->id)}}" method="post"

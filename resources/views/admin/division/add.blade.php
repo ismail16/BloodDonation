@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label>Name Bangla</label>
-                                    <input type="text" name="phone" class="form-control form-control-sm" required/>
+                                    <input type="text" name="name_bn" class="form-control form-control-sm" required/>
                                 </div>
                             </div>
                             <div class="row">

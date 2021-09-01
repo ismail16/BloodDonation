@@ -2,6 +2,8 @@
 @section('title','Welcome to Blood Donation')
 
 @section('content')
+@include('frontend.partials.search_bar')
+
 <div class="slider-detail">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
