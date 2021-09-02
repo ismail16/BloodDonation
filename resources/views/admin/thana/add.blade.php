@@ -36,6 +36,22 @@
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-6">
+                                    <label class="mb-0">Division</label>
+                                    <select name="division_id" class="form-control form-control-sm" id="division_selector">
+                                        @foreach($divisions as $division)
+                                        <option value="{{ $division->slug }}">
+                                            {{ $division->name }}
+                                        </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="mb-0">District</label>
+                                    <select name="district_id" class="form-control form-control-sm" id="district_id">
+                                    </select>
+                                </div>
+                                
+                                <div class="col-md-6">
                                     <label>Name</label>
                                     <input type="text" name="name" class="form-control form-control-sm" required/>
                                 </div>
@@ -76,5 +92,31 @@
         //     alert($(this).val());
         // });
     });
+</script>
+<script type="text/javascript">
+    $('#division_selector').change(function () {
+        var div_id = this.value;
+        let sel = document.getElementById('district_id');
+        $("#district_id").html("");
+
+        $.ajax({
+            url: "{{route('division_selector')}}",
+            method: "POST",
+            dataType: "JSON",
+            data: {div_id:div_id, _token: '{{csrf_token()}}'},
+            success: function (data) {
+
+                console.log(data);
+                
+                for (i = 0; i < data.length; i++) {
+                  sel.innerHTML += `<option> ${data[i].name} </option>`
+                }
+
+            },
+            error: function() {
+                console.log(data);
+            }
+        });
+    })
 </script>
 @endpush

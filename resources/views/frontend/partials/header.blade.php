@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ asset('frontend_assets/fontawesome/css/all.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend_assets/css/grid-gallery.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend_assets/css/style.css') }}" />
+    <script src="{{ asset('frontend_assets/js/jquery-3.2.1.min.js')}}"></script>
 </head>
 
 <body>

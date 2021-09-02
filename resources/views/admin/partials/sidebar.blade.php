@@ -15,7 +15,7 @@
                 </li>
                 <li class="nav-item has-treeview">
                     <a href="{{route('admin.user.index')}}" class="nav-link {{Request::is('admin/user*')?'active':''}}">
-                        <i class="nav-icon fa fa-puzzle-piece"></i>
+                        <i class="nav-icon fa fa-users"></i>
                         <p>Users</p>
                     </a>
                 </li>
@@ -37,12 +37,12 @@
                         <p>Thana</p>
                     </a>
                 </li>
-                <li class="nav-item has-treeview">
+               <!--  <li class="nav-item has-treeview">
                     <a href="{{route('admin.slider.index')}}" class="nav-link {{Request::is('admin/slider*')?'active':''}}">
                         <i class="nav-icon fa fa-puzzle-piece"></i>
                         <p>Sliders</p>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </nav>
     </div>

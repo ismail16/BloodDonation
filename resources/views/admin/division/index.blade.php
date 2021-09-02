@@ -27,7 +27,7 @@
               <table id="dataTable" class="table table-bordered table-striped">
                 <thead>
                   <tr>
-                      <th>ID</th>
+                      <th>S.N</th>
                       <th>Name</th>
                       <th>Experience</th>
                       <th>Status</th>
@@ -37,8 +37,8 @@
                 <tbody>
                  @foreach($divisions as $division)
                  <tr>
+                   <td>{{ $loop->index+1 }}</td>
                    <td>{{$division->name}}</td>
-                   <td>{{$division->name_bn}}</td>
                    <td>{{$division->name_bn}}</td>
                    <td class="text-center">
                      @if($division->status == 0)
