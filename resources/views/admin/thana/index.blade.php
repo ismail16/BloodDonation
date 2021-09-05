@@ -27,9 +27,11 @@
               <table id="dataTable" class="table table-bordered table-striped">
                 <thead>
                   <tr>
-                      <th>ID</th>
-                      <th>Name</th>
-                      <th>Experience</th>
+                      <th>S.N</th>
+                      <th>Division</th>
+                      <th>Districr</th>
+                      <th>Thana</th>
+                      <th>Thana Bangla</th>
                       <th>Status</th>
                       <th class="text-center">Action</th>
                   </tr>
@@ -37,8 +39,10 @@
                 <tbody>
                  @foreach($thanas as $thana)
                  <tr>
+                   <td>{{ $loop->index+1 }}</td>
+                   <td>{{ $thana->division->name }}</td>
+                   <td>{{$thana->district->name}}</td>
                    <td>{{$thana->name}}</td>
-                   <td>{{$thana->name_bn}}</td>
                    <td>{{$thana->name_bn}}</td>
                    <td class="text-center">
                      @if($thana->status == 0)

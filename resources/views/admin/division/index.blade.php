@@ -29,7 +29,7 @@
                   <tr>
                       <th>S.N</th>
                       <th>Name</th>
-                      <th>Experience</th>
+                      <th>Name Bangla</th>
                       <th>Status</th>
                       <th class="text-center">Action</th>
                   </tr>

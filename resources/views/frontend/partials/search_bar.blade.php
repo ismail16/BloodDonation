@@ -9,7 +9,7 @@
         <div class="row d-flex justify-content-center mt-1 mb-1 p-2">
             <div class="col-sm-6 col-md-2 col-lg-2 search_option">
                 <h6 class="mb-1 form-label">Division</h6>
-                <select class="form-control-sm w-100" name="division" id="division_selector" onchange="divisionChange(this);">
+                <select class="form-control-sm w-100" name="division_id" id="division_selector" onchange="divisionChange(this);">
                    @foreach($divisions as $division)
                     <option value="{{ $division->id }}">
                         {{ $division->name }}
@@ -20,13 +20,13 @@
 
             <div class="col-sm-6 col-md-4 col-lg-2 search_option">
                 <h6 class="mb-1 form-label">District</h6>
-                <select class="form-control-sm w-100" name="district"  onchange="districtChange(this);" id="district_id">
+                <select class="form-control-sm w-100" name="district_id"  onchange="districtChange(this);" id="district_id">
                 </select>
             </div>
 
             <div class="col-sm-6 col-md-4 col-lg-2 search_option">
                 <h6 class="mb-1 form-label">Thana</h6>
-                <select class="form-control-sm w-100" name="thana" id="thana_id">
+                <select class="form-control-sm w-100" name="thana_id" id="thana_id">
                 </select>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-2 search_option">
@@ -64,6 +64,7 @@
             dataType: "JSON",
             data: {div_id:div_id, _token: '{{csrf_token()}}'},
             success: function (data) {
+                  sel.innerHTML += `<option value=""> Select District </option>`
                 for (i = 0; i < data.length; i++) {
                   sel.innerHTML += `<option value="${data[i].id}"> ${data[i].name} </option>`
                 }
@@ -85,6 +86,7 @@
             dataType: "JSON",
             data: {dis_id:dis_id, _token: '{{csrf_token()}}'},
             success: function (data) {
+                sels.innerHTML += `<option value=""> Select Thana </option>`
                 for (i = 0; i < data.length; i++) {
                   sels.innerHTML += `<option value="${data[i].id}"> ${data[i].name} </option>`
                 }

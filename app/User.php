@@ -14,9 +14,19 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class);
     }
 
-    public function studentinfo()
+    public function division()
     {
-        return $this->hasOne('App\Models\StudentInfo');
+      return $this->belongsTo('App\Models\Division');
+    }
+
+    public function district()
+    {
+        return $this->belongsTo('App\Models\District');
+    }
+
+    public function thana()
+    {
+        return $this->belongsTo('App\Models\Thana');
     }
 
 

@@ -39,7 +39,7 @@
                                     <label class="mb-0">Division</label>
                                     <select name="division_id" class="form-control form-control-sm">
                                         @foreach($divisions as $division)
-                                        <option value="{{ $division->id }}">{{ $division->name }}</option>
+                                        <option value="{{ $division->id }}" {{ $division->id ==  $district->division_id ? 'selected':'' }}>{{ $division->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>

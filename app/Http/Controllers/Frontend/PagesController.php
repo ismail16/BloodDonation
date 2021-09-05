@@ -32,34 +32,47 @@ class PagesController extends Controller
 
     public function search_blood(Request $request)
     {
-         // return $request;
-        $division = $request->division;
-        $district = $request->district;
-        $thana = $request->thana;
+        $division_id = $request->division_id;
+        $district_id = $request->district_id;
+        $thana_id = $request->thana_id;
         $blood_group = $request->blood_group;
 
-        $search_results = User::orderByDesc('id')
-                ->Where('division', 'LIKE', '%' . $division . '%')
-                ->Where('district', 'LIKE', '%' . $district . '%')
-                ->Where('thana', 'LIKE', '%' . $thana . '%')
-                ->Where(function ($query) use ($blood_group) {
-                    $query->where('blood_group', 'LIKE', '%' . $blood_group . '%')
-                            ->orWhere('blood_group', 'LIKE', '%' . $blood_group . '%');
-                    })
-                ->Where([
-                    ['status',1]
-                ])
-                ->Where([
-                    ['role_id',2]
-                ])
+        if ($district_id && $thana_id) {
+            $search_results = User::orderByDesc('id')
+                ->Where('division_id',$division_id)
+                ->Where('district_id', $district_id)
+                ->Where('thana_id',$thana_id)
+                ->Where('blood_group', $blood_group)
+                ->Where('status',1)
+                ->Where('role_id',2)
                 ->paginate(5);
-        $search_results->appends ( array (
-                'blood_group' => $blood_group
-        ));
+        }else if ($district_id) {
+            $search_results = User::orderByDesc('id')
+                ->Where('division_id',$division_id)
+                ->Where('district_id', $district_id)
+                ->Where('blood_group', $blood_group)
+                ->Where('status',1)
+                ->Where('role_id',2)
+                ->paginate(5);
+        }else if ($thana_id) {
+            $search_results = User::orderByDesc('id')
+                ->Where('division_id',$division_id)
+                ->Where('thana_id',$thana_id)
+                ->Where('blood_group', $blood_group)
+                ->Where('status',1)
+                ->Where('role_id',2)
+                ->paginate(5);
+        }else{
+             $search_results = User::orderByDesc('id')
+                ->Where('division_id',$division_id)
+                ->Where('blood_group', $blood_group)
+                ->Where('status',1)
+                ->Where('role_id',2)
+                ->paginate(5);
+        }
+
 
         // return $search_results;
-
-        // $users = User::where('role_id', 2)->get();
 
         return view('frontend.pages.search_result_blood',compact('search_results'));
     }

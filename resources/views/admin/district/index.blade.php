@@ -39,7 +39,7 @@
                  @foreach($districts as $district)
                  <tr>
                    <td>{{ $loop->index+1 }}</td>
-                   <td>{{$district->division_id}}</td>
+                   <td>{{$district->division->name }}</td>
                    <td>{{$district->name}}</td>
                    <td>{{$district->name_bn}}</td>
                    <td class="text-center">

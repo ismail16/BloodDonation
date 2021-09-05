@@ -49,9 +49,9 @@
                                     <td>{{ $user->phone }}</td>
                                     
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->division }}</td>
-                                    <td>{{ $user->district }}</td>
-                                    <td>{{ $user->thana }}</td>
+                                    <td>{{ $user->division->name }}</td>
+                                    <td>{{ $user->district->name }}</td>
+                                    <td>{{ $user->thana->name }}</td>
                                     <td>{{ $user->donate_date }}</td>
                                     <td>
                                         @if($user->status == 0)

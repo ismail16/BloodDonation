@@ -18,9 +18,9 @@ class CreateUsersTable extends Migration
             $table->string('photo')->default('default.png');
             $table->string('blood_group');
             $table->string('date_of_birth');
-            $table->string('division');
-            $table->string('district');
-            $table->string('thana');
+            $table->string('division_id');
+            $table->string('district_id');
+            $table->string('thana_id');
             $table->string('donate_date')->nullable();
             $table->text('disease')->nullable();
             $table->boolean('status')->default(0);

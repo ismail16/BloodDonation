@@ -39,7 +39,7 @@
                                     <label class="mb-0">Division</label>
                                     <select name="division_id" class="form-control form-control-sm" id="division_selector">
                                         @foreach($divisions as $division)
-                                        <option value="{{ $division->id }}">
+                                        <option value="{{ $division->id }}"  {{ $division->id ==  $thana->division_id ? 'selected':'' }}>
                                             {{ $division->name }}
                                         </option>
                                         @endforeach
@@ -49,7 +49,7 @@
                                     <label class="mb-0">District</label>
                                     <select name="district_id" class="form-control form-control-sm">
                                         @foreach($districts as $district)
-                                        <option value="{{ $district->id }}">
+                                        <option value="{{ $district->id }}" {{ $district->id ==  $thana->district_id ? 'selected':'' }}>
                                             {{ $district->name }}
                                         </option>
                                         @endforeach
