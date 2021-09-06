@@ -19,6 +19,11 @@
         <div class="col-md-12">
             <div class="card">
                 <form method="POST" action="{{route('admin.user.store')}}" enctype="multipart/form-data">
+                    <?php 
+                        $divisions =  \App\Models\Division::orderBy('id', 'desc')->get();
+                        // $district =  \App\Models\District::where('id', $user->district_id)->first();
+                        // $thana =  \App\Models\Thana::where('id', $user->district_id)->first();
+                    ?>
                     @csrf
                     <div class="card-body pb-0">
                         <div class="row">
@@ -64,7 +69,7 @@
                                     </div>
 
                                     <div class="col-md-3">
-                                        <label class="mb-0">Password</label>
+                                        <label class="mb-0">Password<span class="text-danger">*</span></label>
                                         <input id="password" type="password" class="form-control mb-2 @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="password">
                                         @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -73,25 +78,34 @@
                                         @enderror
                                     </div>
                                     <div class="col-md-3">
-                                        <label class="mb-0">re-type password</label>
+                                        <label class="mb-0">re-type password<span class="text-danger">*</span></label>
                                         <input id="password-confirm" type="password" class="form-control mb-2" name="password_confirmation" required autocomplete="new-password" placeholder="re-type password">
                                     </div>
 
                                     <div class="col-md-3">
                                         <label class="mb-0">Division<span class="text-danger">*</span> </label>
-                                        <input type="text" name="division" placeholder="Division" class="form-control mb-2 ">
+                                        <select class="form-control" name="division_id" id="division_selector" onchange="divisionChange(this);">
+                                            @foreach($divisions as $division)
+                                                <option value="{{ $division->id }}">
+                                                    {{ $division->name }}
+                                                </option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                     <div class="col-md-3">
                                         <label class="mb-0">District<span class="text-danger">*</span> </label>
-                                        <input type="text" name="district" placeholder="District" class="form-control mb-2 ">
+                                        <select class="form-control" name="district_id"  onchange="districtChange(this);" id="district_id">
+                                            
+                                        </select>
                                     </div>
                                     <div class="col-md-3">
                                         <label class="mb-0">Thana<span class="text-danger">*</span> </label>
-                                        <input type="text" name="thana" placeholder="Thana" class="form-control mb-2 ">
+                                        <select class="form-control" name="thana_id" id="thana_id">
+                                        </select>
                                     </div>
                                     <div class="col-md-3">
                                         <label class="mb-0">Donate Date<span class="text-danger">*</span> </label>
-                                        <input type="text" name="donate_date" class="form-control mb-2 ">
+                                        <input type="date" name="donate_date" class="form-control mb-2 ">
                                     </div>
 
                                     <div class="col-md-6">
@@ -107,7 +121,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="{{route('admin.user.index')}}" class="btn btn-sm btn-info"> <i class="fa fa-list"></i> portfolio</a>
+                        <a href="{{route('admin.user.index')}}" class="btn btn-sm btn-info"> <i class="fa fa-list"></i> Users</a>
 
                         <div class="float-right">
                             <a href="{{route('admin.user.index')}}" class="btn btn-sm btn-secondary mr-2"> Cancel</a>
@@ -130,5 +144,50 @@
             $('.textarea').summernote()
         })
     </script>
+    <script type="text/javascript">
+    function divisionChange(div)
+    {
+        var div_id = div.value;
+        let sel = document.getElementById('district_id');
+        $("#district_id").html("");
+        $.ajax({
+            url: "{{route('division_selector')}}",
+            method: "POST",
+            dataType: "JSON",
+            data: {div_id:div_id, _token: '{{csrf_token()}}'},
+            success: function (data) {
+                  sel.innerHTML += `<option value=""> Select District </option>`
+                for (i = 0; i < data.length; i++) {
+                  sel.innerHTML += `<option value="${data[i].id}"> ${data[i].name} </option>`
+                }
+            },
+            error: function() {
+                console.log(data);
+            }
+        });
+    }
+
+    function districtChange(dis)
+    {
+        var dis_id = dis.value;
+        let sels = document.getElementById('thana_id');
+        $("#thana_id").html("");
+        $.ajax({
+            url: "{{route('district_selector')}}",
+            method: "POST",
+            dataType: "JSON",
+            data: {dis_id:dis_id, _token: '{{csrf_token()}}'},
+            success: function (data) {
+                sels.innerHTML += `<option value=""> Select Thana </option>`
+                for (i = 0; i < data.length; i++) {
+                  sels.innerHTML += `<option value="${data[i].id}"> ${data[i].name} </option>`
+                }
+            },
+            error: function() {
+                console.log(data);
+            }
+        });
+    }
+</script>
 @endpush
 

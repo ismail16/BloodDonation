@@ -115,7 +115,7 @@
     </div>
 </div>
 
-<section id="process" class="donation-care">
+<!-- <section id="process" class="donation-care">
     <div class="container">
         <div class="row session-title">
             <h2>Donation Process</h2>
@@ -158,7 +158,7 @@
 
 
     </div>
-</section>
+</section> -->
 
 <!-- <div id="blog" class="blog-container contaienr-fluid">
     <div class="container">

@@ -6,23 +6,18 @@
                     <ul class="ulleft">
                         <li>
                             <i class="far fa-envelope"></i>
-                            sales@smarteyeapps.com
+                            contact@picodeit.com
                             <span>|</span></li>
                             <li>
-                                <i class="far fa-clock"></i>
-                                Service Time : 12:AM
+                               <i class="fa fa-search"></i>
+                                Search Blood
                             </li>
                         </ul>
                     </div>
-                    <div class="col-lg-6 col-md-12">
+                    <div class="col-lg-6 col-md-12 d-flex justify-content-center">
                         <ul class="ulright">
                             <li>
-                                <i class="fas fa-cloud-upload-alt"></i>
-                                Search Blood
-                                <span>|</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-cloud-upload-alt"></i>
+                                <i class="fa fa-tint"></i>
                                 <a href="{{ route('register') }}" class="text-white">
                                     Donate Blood
                                 </a>
@@ -71,9 +66,9 @@
                                     <a class="nav-link" href="#gallery">Gallery</a>
                                 </li>
 
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="nav-link" href="#process">Process</a>
-                                </li>
+                                </li> -->
 
                                 <li class="nav-item">
                                     <a class="nav-link" href="#contact">Contact US</a>

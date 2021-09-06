@@ -43,7 +43,7 @@
                                 <tr>
                                     <td>{{ $loop->index+1 }}</td>
                                     <td>
-                                        <img src="{{ asset('images/profile_image/'.$user->profile_image) }}" class="img-fluid table_image" alt="">
+                                        <img src="{{ asset('images/profile_image/'.$user->photo) }}" class="img-fluid table_image" alt="">
                                     </td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->phone }}</td>
@@ -52,7 +52,7 @@
                                     <td>{{ $user->division->name }}</td>
                                     <td>{{ $user->district->name }}</td>
                                     <td>{{ $user->thana->name }}</td>
-                                    <td>{{ $user->donate_date }}</td>
+                                    <td>{{date('d-m-Y', strtotime($user->donate_date)) }}</td>
                                     <td>
                                         @if($user->status == 0)
                                             <span class="badge bg-yellow">Inactive</span>

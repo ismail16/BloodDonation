@@ -1,0 +1,894 @@
+/* www.theanything.net/ */
+// State lists
+var division = new Array();
+
+
+INSERT INTO `districts` (`id`, `division_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '8', 'Narsingdi', 'Narsingdi', 'Narsingdi', '1', NULL, NULL),
+(NULL, '8', 'Gazipur', 'Gazipur', 'Gazipur', '1', NULL, NULL),
+(NULL, '8', 'Shariatpur', 'Shariatpur', 'Shariatpur', '1', NULL, NULL),
+(NULL, '8', 'Narayanganj', 'Narayanganj', 'Narayanganj', '1', NULL, NULL),
+(NULL, '8', 'Tangail', 'Tangail', 'Tangail', '1', NULL, NULL),
+(NULL, '8', 'Kishoreganj', 'Kishoreganj', 'Kishoreganj', '1', NULL, NULL),
+(NULL, '8', 'Manikganj', 'Manikganj', 'Manikganj', '1', NULL, NULL),
+(NULL, '8', 'Munshiganj', 'Munshiganj', 'Munshiganj', '1', NULL, NULL),
+(NULL, '8', 'Rajbari', 'Rajbari', 'Rajbari', '1', NULL, NULL),
+(NULL, '8', 'Madaripur', 'Madaripur', 'Madaripur', '1', NULL, NULL),
+(NULL, '8', 'Gopalganj', 'Gopalganj', 'Gopalganj', '1', NULL, NULL),
+(NULL, '8', 'Faridpur', 'Faridpur', 'Faridpur', '1', NULL, NULL),
+(NULL, '8', 'Dhaka', 'Dhaka', 'Dhaka', '1', NULL, NULL)
+;
+<!-- ----------------------------------------------------------------------------------- -->
+<!-- Narsingdi	Belabo, Monohardi, Narsingdisadar, Palash, Raipura, Shibpur -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '8', '1', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '8', '1', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '1', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '8', '1', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '8', '1', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '8', '1', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Gazipur	Kaliganj, Kaliakair, Kapasia, Sadar, Sreepur -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '8', '2', 'Kaliganj', 'Kaliganj', 'Kaliganj', '1', NULL, NULL), 
+(NULL, '8', '2', 'Kaliakair', 'Kaliakair', 'Kaliakair', '1', NULL, NULL), 
+(NULL, '8', '2', 'Kapasia', 'Kapasia', 'Kapasia', '1', NULL, NULL), 
+(NULL, '8', '2', 'Gazipur_Sadar', 'Gazipur_Sadar', 'Gazipur_Sadar', '1', NULL, NULL),
+(NULL, '8', '2', 'Sreepur', 'Sreepur', 'Sreepur', '1', NULL, NULL)
+;
+<!-- Shariatpur	Sadar, Naria, Zajira, Gosairhat, Bhedarganj, Damudya -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '8', '3', 'Shariatpur_Sadar', 'Shariatpur_Sadar', 'Shariatpur_Sadar', '1', NULL, NULL), 
+(NULL, '8', '3', 'Naria', 'Naria', 'Naria', '1', NULL, NULL), 
+(NULL, '8', '3', 'Zajira', 'Zajira', 'Zajira', '1', NULL, NULL), 
+(NULL, '8', '3', 'Gosairhat', 'Gosairhat', 'Gosairhat', '1', NULL, NULL),
+(NULL, '8', '3', 'Bhedarganj', 'Bhedarganj', 'Bhedarganj', '1', NULL, NULL), 
+(NULL, '8', '3', 'Damudya', 'Damudya', 'Damudya', '1', NULL, NULL)
+;
+<!-- Narayanganj	Araihazar, Bandar, Narayanganjsadar, Rupganj, Sonargaon -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '8', '4', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '8', '4', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '4', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '8', '4', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '8', '4', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '8', '4', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Tangail	Basail, Bhuapur, Delduar, Ghatail, Gopalpur, Madhupur, Mirzapur, Nagarpur, Sakhipur, Tangailsadar, Kalihati, Dhanbari -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '8', '5', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '8', '5', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '5', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '8', '5', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '8', '5', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '8', '5', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Kishoreganj	Itna, Katiadi, Bhairab, Tarail, Hossainpur, Pakundia, Kuliarchar, Kishoreganjsadar, Karimgonj, Bajitpur, Austagram, Mithamoin, Nikli -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '8', '6', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '8', '6', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '6', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '8', '6', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '8', '6', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '8', '6', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Manikganj	Harirampur, Saturia, Sadar, Gior, Shibaloy, Doulatpur, Singiar -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '8', '7', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '8', '7', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '7', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '8', '7', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '8', '7', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '8', '7', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Dhaka  'Adabor','Badda','Bangsal','Bimanbandar','Cantonment','Chak Bazar','Dakshinkhan','Darus Salam','Demra','Dhamrai','Dhanmondi','Dohar','Gendaria','Gulshan','Hazaribagh','Jatrabari','Kadamtali','Kafrul','Kalabagan','Kamrangirchar','Keraniganj','Khilgaon','khilkhet','Kotwali','Lalbagh','Mirpur','Mohammadpur','Motijheel','Nawabganj','Newmarket','Pallabi','Paltan','Ramna','Rampura','Sabujbagh','Savar','Shah Ali','Shahbag','Sher-e-Bangla Nagar','Shyampur','Sutrapur','Tejgaon ','Turag','Uttara','Uttar Khan' -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '8', '13', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '13', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '8', '13', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '8', '13', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '8', '13', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Munshiganj	Sadar, Sreenagar, Sirajdikhan, Louhajanj, Gajaria, Tongibari -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '8', '8', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '8', '8', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '8', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '8', '8', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '8', '8', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '8', '8', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Rajbari	Sadar, Goalanda, Pangsa, Baliakandi, Kalukhali -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '8', '9', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '8', '9', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '9', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '8', '9', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '8', '9', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '8', '9', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Madaripur	Sadar, Shibchar, Kalkini, Rajoir -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '8', '10', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '8', '10', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '10', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '8', '10', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '8', '10', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '8', '10', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Gopalganj	Sadar, Kashiani, Tungipara, Kotalipara, Muksudpur -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '8', '11', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '8', '11', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '11', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '8', '11', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '8', '11', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '8', '11', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Faridpur	Sadar, Alfadanga, Boalmari, Sadarpur, Nagarkanda, Bhanga, Charbhadrasan, Madhukhali, Saltha -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '8', '12', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '8', '12', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '8', '12', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '8', '12', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '8', '12', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '8', '12', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- ---------------------------------------------------------------------------------------- -->
+
+
+
+
+7.
+INSERT INTO `districts` (`id`, `division_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '7', 'Jashore', 'Jashore', 'Jashore', '1', NULL, NULL),
+(NULL, '7', 'Satkhira', 'Satkhira', 'Satkhira', '1', NULL, NULL),
+(NULL, '7', 'Meherpur', 'Meherpur', 'Meherpur', '1', NULL, NULL),
+(NULL, '7', 'Narail', 'Narail', 'Narail', '1', NULL, NULL),
+(NULL, '7', 'Chuadanga', 'Chuadanga', 'Chuadanga', '1', NULL, NULL),
+(NULL, '7', 'Kushtia', 'Kushtia', 'Kushtia', '1', NULL, NULL),
+(NULL, '7', 'Magura', 'Magura', 'Magura', '1', NULL, NULL),
+(NULL, '7', 'Khulna', 'Khulna', 'Khulna', '1', NULL, NULL),
+(NULL, '7', 'Bagerhat', 'Bagerhat', 'Bagerhat', '1', NULL, NULL),
+(NULL, '7', 'Jhenaidah', 'Jhenaidah', 'Jhenaidah', '1', NULL, NULL),
+;
+<!-- ------------------------------------------------------------------------ -->
+<!-- Jashore	Manirampur, Abhaynagar, Bagherpara, Chougachha, Jhikargacha, Keshabpur, Sadar, Sharsha -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '7', '14', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '7', '14', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '7', '14', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '7', '14', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '7', '14', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '7', '14', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Satkhira	Assasuni, Debhata, Kalaroa, Satkhirasadar, Shyamnagar, Tala, Kaliganj -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '7', '15', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '7', '15', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '7', '15', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '7', '15', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '7', '15', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '7', '15', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Meherpur	Mujibnagar, Meherpursadar, Gangni -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '7', '16', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '7', '16', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '7', '16', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '7', '16', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '7', '16', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '7', '16', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Narail	Narailsadar, Lohagara, Kalia -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '7', '17', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '7', '17', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '7', '17', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '7', '17', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '7', '17', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '7', '17', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Chuadanga	Chuadangasadar, Alamdanga, Damurhuda, Jibannagar -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '7', '18', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '7', '18', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '7', '18', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '7', '18', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '7', '18', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '7', '18', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Kushtia	Kushtiasadar, Kumarkhali, Khoksa, Mirpurkushtia, Daulatpur, Bheramara -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '7', '19', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '7', '19', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '7', '19', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '7', '19', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '7', '19', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '7', '19', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Magura	Shalikha, Sreepur, Magurasadar, Mohammadpur -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '7', '20', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '7', '20', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '7', '20', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '7', '20', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '7', '20', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '7', '20', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Khulna	Paikgasa, Fultola, Digholia, Rupsha, Terokhada, Dumuria, Botiaghata, Dakop, Koyra -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '7', '21', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '7', '21', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '7', '21', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '7', '21', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '7', '21', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '7', '21', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Bagerhat	Fakirhat, Sadar, Mollahat, Sarankhola, Rampal, Morrelganj, Kachua, Mongla, Chitalmari -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '7', '22', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '7', '22', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '7', '22', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '7', '22', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '7', '22', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '7', '22', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Jhenaidah	Sadar, Shailkupa, Harinakundu, Kaliganj, Kotchandpur, Moheshpur -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '7', '23', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '7', '23', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '7', '23', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '7', '23', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '7', '23', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '7', '23', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- -------------------------------------------------------------------------- -->
+
+
+
+
+6.
+INSERT INTO `districts` (`id`, `division_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '6', 'Sylhet', 'Sylhet', 'Sylhet', '1', NULL, NULL),
+(NULL, '6', 'Moulvibazar', 'Moulvibazar', 'Moulvibazar', '1', NULL, NULL),
+(NULL, '6', 'Habiganj', 'Habiganj', 'Habiganj', '1', NULL, NULL),
+(NULL, '6', 'Sunamganj', 'Sunamganj', 'Sunamganj', '1', NULL, NULL)
+;
+
+<!-- ------------------------------------------------------------------------ -->
+<!-- Sylhet	Balaganj, Beanibazar, Bishwanath, Companiganj, Fenchuganj, Golapganj, Gowainghat, Jaintiapur, Kanaighat, Sylhetsadar, Zakiganj, Dakshinsurma, Osmaninagar -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '6', '24', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '6', '24', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '6', '24', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '6', '24', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '6', '24', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '6', '24', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Moulvibazar	Barlekha, Kamolganj, Kulaura, Moulvibazarsadar, Rajnagar, Sreemangal, Juri -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '6', '25', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '6', '25', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '6', '25', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '6', '25', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '6', '25', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '6', '25', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Habiganj	Nabiganj, Bahubal, Ajmiriganj, Baniachong, Lakhai, Chunarughat, Habiganjsadar, Madhabpur, Shayestaganj -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '6', '26', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '6', '26', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '6', '26', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '6', '26', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '6', '26', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '6', '26', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Sunamganj	Sadar, Southsunamganj, Bishwambarpur, Chhatak, Jagannathpur, Dowarabazar, Tahirpur, Dharmapasha, Jamalganj, Shalla, Derai -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '6', '27', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '6', '27', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '6', '27', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '6', '27', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '6', '27', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '6', '27', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+
+<!-- -------------------------------------------------------------------------- -->
+
+
+
+
+
+5.
+INSERT INTO `districts` (`id`, `division_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '5', 'Jhalakathi', 'Jhalakathi', 'Jhalakathi', '1', NULL, NULL),
+(NULL, '5', 'Patuakhali', 'Patuakhali', 'Patuakhali', '1', NULL, NULL),
+(NULL, '5', 'Pirojpur', 'Pirojpur', 'Pirojpur', '1', NULL, NULL),
+(NULL, '5', 'Barishal', 'Barishal', 'Barishal', '1', NULL, NULL),
+(NULL, '5', 'Bhola', 'Bhola', 'Bhola', '1', NULL, NULL),
+(NULL, '5', 'Barguna', 'Barguna', 'Barguna', '1', NULL, NULL)
+;
+
+<!-- ------------------------------------------------------------------------ -->
+<!-- Jhalakathi	Sadar, Kathalia, Nalchity, Rajapur -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '5', '28', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '5', '28', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '5', '28', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '5', '28', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '5', '28', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '5', '28', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Patuakhali	Bauphal, Sadar, Dumki, Dashmina, Kalapara, Mirzaganj, Galachipa, Rangabali -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '5', '29', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '5', '29', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '5', '29', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '5', '29', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '5', '29', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '5', '29', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Pirojpur	Sadar, Nazirpur, Kawkhali, Bhandaria, Mathbaria, Nesarabad, Indurkani -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '5', '30', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '5', '30', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '5', '30', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '5', '30', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '5', '30', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '5', '30', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Barishal	Barishalsadar, Bakerganj, Babuganj, Wazirpur, Banaripara, Gournadi, Agailjhara, Mehendiganj, Muladi, Hizla -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '5', '31', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '5', '31', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '5', '31', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '5', '31', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '5', '31', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '5', '31', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Bhola	Sadar, Borhanuddin, Charfesson, Doulatkhan, Monpura, Tazumuddin, Lalmohan -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '5', '32', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '5', '32', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '5', '32', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '5', '32', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '5', '32', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '5', '32', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Barguna	Amtali, Sadar, Betagi, Bamna, Pathorghata, Taltali -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '5', '33', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '5', '33', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '5', '33', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '5', '33', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '5', '33', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '5', '33', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- -------------------------------------------------------------------------- -->
+
+
+
+4.
+INSERT INTO `districts` (`id`, `division_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '4', 'Sirajganj', 'Sirajganj', 'Sirajganj', '1', NULL, NULL),
+(NULL, '4', 'Pabna', 'Pabna', 'Pabna', '1', NULL, NULL),
+(NULL, '4', 'Bogura', 'Bogura', 'Bogura', '1', NULL, NULL),
+(NULL, '4', 'Rajshahi', 'Rajshahi', 'Rajshahi', '1', NULL, NULL),
+(NULL, '4', 'Natore', 'Natore', 'Natore', '1', NULL, NULL),
+(NULL, '4', 'Joypurhat', 'Joypurhat', 'Joypurhat', '1', NULL, NULL),
+(NULL, '4', 'Chapainawabganj', 'Chapainawabganj', 'Chapainawabganj', '1', NULL, NULL),
+(NULL, '4', 'Naogaon', 'Naogaon', 'Naogaon', '1', NULL, NULL)
+;
+
+<!-- ------------------------------------------------------------------------ -->
+<!-- Sirajganj	Belkuchi, Chauhali, Kamarkhand, Kazipur, Raigonj, Shahjadpur, Sirajganjsadar, Tarash, Ullapara -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '4', '34', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '4', '34', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '4', '34', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '4', '34', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '4', '34', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '4', '34', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Pabna	Sujanagar, Ishurdi, Bhangura, Pabnasadar, Bera, Atghoria, Chatmohar, Santhia, Faridpur -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '4', '35', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '4', '35', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '4', '35', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '4', '35', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '4', '35', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '4', '35', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Bogura	Kahaloo, Sadar, Shariakandi, Shajahanpur, Dupchanchia, Adamdighi, Nondigram, Sonatala, Dhunot, Gabtali, Sherpur, Shibganj -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '4', '36', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '4', '36', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '4', '36', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '4', '36', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '4', '36', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '4', '36', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Rajshahi	Paba, Durgapur, Mohonpur, Charghat, Puthia, Bagha, Godagari, Tanore, Bagmara -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '4', '37', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '4', '37', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '4', '37', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '4', '37', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '4', '37', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '4', '37', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Natore	Natoresadar, Singra, Baraigram, Bagatipara, Lalpur, Gurudaspur, Naldanga -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '4', '38', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '4', '38', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '4', '38', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '4', '38', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '4', '38', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '4', '38', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Joypurhat	Akkelpur, Kalai, Khetlal, Panchbibi, Joypurhatsadar -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '4', '39', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '4', '39', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '4', '39', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '4', '39', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '4', '39', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '4', '39', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Chapainawabganj	Chapainawabganjsadar, Gomostapur, Nachol, Bholahat, Shibganj -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '4', '40', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '4', '40', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '4', '40', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '4', '40', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '4', '40', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '4', '40', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Naogaon	Mohadevpur, Badalgachi, Patnitala, Dhamoirhat, Niamatpur, Manda, Atrai, Raninagar, Naogaonsadar, Porsha, Sapahar -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '4', '41', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '4', '41', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '4', '41', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '4', '41', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '4', '41', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '4', '41', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- -------------------------------------------------------------------------- -->
+
+
+
+3.
+INSERT INTO `districts` (`id`, `division_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '3', 'Cumilla', 'Cumilla', 'Cumilla', '1', NULL, NULL),
+(NULL, '3', 'Feni', 'Feni', 'Feni', '1', NULL, NULL),
+(NULL, '3', 'Brahmanbaria', 'Brahmanbaria', 'Brahmanbaria', '1', NULL, NULL),
+(NULL, '3', 'Rangamati', 'Rangamati', 'Rangamati', '1', NULL, NULL),
+(NULL, '3', 'Noakhali', 'Noakhali', 'Noakhali', '1', NULL, NULL),
+(NULL, '3', 'Chandpur', 'Chandpur', 'Chandpur', '1', NULL, NULL),
+(NULL, '3', 'Lakshmipur', 'Lakshmipur', 'Lakshmipur', '1', NULL, NULL),
+(NULL, '3', 'Chattogram', 'Chattogram', 'Chattogram', '1', NULL, NULL),
+(NULL, '3', 'Coxsbazar', 'Coxsbazar', 'Coxsbazar', '1', NULL, NULL),
+(NULL, '3', 'Khagrachhari', 'Khagrachhari', 'Khagrachhari', '1', NULL, NULL),
+(NULL, '3', 'Bandarban', 'Bandarban', 'Bandarban', '1', NULL, NULL)
+;
+
+<!-- ------------------------------------------------------------------------ -->
+<!-- Cumilla	Debidwar, Barura, Brahmanpara, Chandina, Chauddagram, Daudkandi, Homna, Laksam, Muradnagar, Nangalkot, Cumillasadar, Meghna, Monohargonj, Sadarsouth, Titas, Burichang, Lalmai -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '3', '42', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '3', '42', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '3', '42', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '3', '42', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '3', '42', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '3', '42', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Feni	Chhagalnaiya, Sadar, Sonagazi, Fulgazi, Parshuram, Daganbhuiyan -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '3', '43', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '3', '43', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '3', '43', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '3', '43', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '3', '43', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '3', '43', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Brahmanbaria	Sadar, Kasba, Nasirnagar, Sarail, Ashuganj, Akhaura, Nabinagar, Bancharampur, Bijoynagar -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '3', '44', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '3', '44', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '3', '44', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '3', '44', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '3', '44', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '3', '44', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Rangamati	Sadar, Kaptai, Kawkhali, Baghaichari, Barkal, Langadu, Rajasthali, Belaichari, Juraichari, Naniarchar -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '3', '45', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '3', '45', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '3', '45', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '3', '45', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '3', '45', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '3', '45', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Noakhali	Sadar, Companiganj, Begumganj, Hatia, Subarnachar, Kabirhat, Senbug, Chatkhil, Sonaimuri -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '3', '46', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '3', '46', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '3', '46', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '3', '46', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '3', '46', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '3', '46', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Chandpur	Haimchar, Kachua, Shahrasti, Sadar, Matlabsouth, Hajiganj, Matlabnorth, Faridgonj -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '3', '47', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '3', '47', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '3', '47', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '3', '47', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '3', '47', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '3', '47', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Lakshmipur	Sadar, Kamalnagar, Raipur, Ramgati, Ramganj -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '3', '48', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '3', '48', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '3', '48', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '3', '48', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '3', '48', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '3', '48', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Chattogram	Rangunia, Sitakunda, Mirsharai, Patiya, Sandwip, Banshkhali, Boalkhali, Anwara, Chandanaish, Satkania, Lohagara, Hathazari, Fatikchhari, Raozan, Karnafuli -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '3', '49', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '3', '49', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '3', '49', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '3', '49', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '3', '49', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '3', '49', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Coxsbazar	Sadar, Chakaria, Kutubdia, Ukhiya, Moheshkhali, Pekua, Ramu, Teknaf -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '3', '50', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '3', '50', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '3', '50', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '3', '50', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '3', '50', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '3', '50', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Khagrachhari	Sadar, Dighinala, Panchari, Laxmichhari, Mohalchari, Manikchari, Ramgarh, Matiranga, Guimara -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '3', '51', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '3', '51', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '3', '51', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '3', '51', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '3', '51', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '3', '51', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Bandarban	Sadar, Alikadam, Naikhongchhari, Rowangchhari, Lama, Ruma, Thanchi -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '3', '52', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '3', '52', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '3', '52', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '3', '52', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '3', '52', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '3', '52', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- -------------------------------------------------------------------------- -->
+
+
+
+
+2.
+INSERT INTO `districts` (`id`, `division_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '2', 'Panchagarh', 'Panchagarh', 'Panchagarh', '1', NULL, NULL),
+(NULL, '2', 'Dinajpur', 'Dinajpur', 'Dinajpur', '1', NULL, NULL),
+(NULL, '2', 'Lalmonirhat', 'Lalmonirhat', 'Lalmonirhat', '1', NULL, NULL),
+(NULL, '2', 'Nilphamari', 'Nilphamari', 'Nilphamari', '1', NULL, NULL),
+(NULL, '2', 'Gaibandha', 'Gaibandha', 'Gaibandha', '1', NULL, NULL),
+(NULL, '2', 'Thakurgaon', 'Thakurgaon', 'Thakurgaon', '1', NULL, NULL),
+(NULL, '2', 'Rangpur', 'Rangpur', 'Rangpur', '1', NULL, NULL),
+(NULL, '2', 'Kurigram', 'Kurigram', 'Kurigram', '1', NULL, NULL)
+;
+<!-- ------------------------------------------------------------------------ -->
+<!-- Panchagarh	Panchagarhsadar, Debiganj, Boda, Atwari, Tetulia -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '2', '53', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '2', '53', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '2', '53', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '2', '53', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '2', '53', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '2', '53', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Dinajpur	Nawabganj, Birganj, Ghoraghat, Birampur, Parbatipur, Bochaganj, Kaharol, Fulbari, Dinajpursadar, Hakimpur, Khansama, Birol, Chirirbandar -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '2', '54', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '2', '54', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '2', '54', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '2', '54', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '2', '54', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '2', '54', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Lalmonirhat	Sadar, Kaliganj, Hatibandha, Patgram, Aditmari -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '2', '55', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '2', '55', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '2', '55', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '2', '55', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '2', '55', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '2', '55', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Nilphamari	Syedpur, Domar, Dimla, Jaldhaka, Kishorganj, Nilphamarisadar -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '2', '56', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '2', '56', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '2', '56', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '2', '56', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '2', '56', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '2', '56', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Gaibandha	Sadullapur, Gaibandhasadar, Palashbari, Saghata, Gobindaganj, Sundarganj, Phulchari -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '2', '57', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '2', '57', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '2', '57', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '2', '57', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '2', '57', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '2', '57', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Thakurgaon	Thakurgaonsadar, Pirganj, Ranisankail, Haripur, Baliadangi -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '2', '58', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '2', '58', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '2', '58', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '2', '58', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '2', '58', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '2', '58', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Rangpur	Rangpursadar, Gangachara, Taragonj, Badargonj, Mithapukur, Pirgonj, Kaunia, Pirgacha -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '2', '59', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '2', '59', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '2', '59', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '2', '59', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '2', '59', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '2', '59', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Kurigram	Kurigramsadar, Nageshwari, Bhurungamari, Phulbari, Rajarhat, Ulipur, Chilmari, Rowmari, Charrajibpur -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '2', '60', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '2', '60', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '2', '60', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '2', '60', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '2', '60', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '2', '60', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- -------------------------------------------------------------------------- -->
+
+
+
+1.
+INSERT INTO `districts` (`id`, `division_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '1', 'Sherpur', 'Sherpur', 'Sherpur', '1', NULL, NULL),
+(NULL, '1', 'Mymensingh', 'Mymensingh', 'Mymensingh', '1', NULL, NULL),
+(NULL, '1', 'Jamalpur', 'Jamalpur', 'Jamalpur', '1', NULL, NULL),
+(NULL, '1', 'Netrokona', 'Netrokona', 'Netrokona', '1', NULL, NULL)
+;
+
+<!-- ------------------------------------------------------------------------ -->
+<!-- Sherpur	Sherpursadar, Nalitabari, Sreebordi, Nokla, Jhenaigati -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '1', '61', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '1', '61', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '1', '61', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '1', '61', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '1', '61', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '1', '61', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Mymensingh	Fulbaria, Trishal, Bhaluka, Muktagacha, Mymensinghsadar, Dhobaura, Phulpur, Haluaghat, Gouripur, Gafargaon, Iswarganj, Nandail, Tarakanda -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '1', '62', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '1', '62', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '1', '62', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '1', '62', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '1', '62', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '1', '62', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+<!-- Jamalpur	Jamalpursadar, Melandah, Islampur, Dewangonj, Sarishabari, Madarganj, Bokshiganj -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '1', '63', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '1', '63', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '1', '63', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '1', '63', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '1', '63', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '1', '63', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- Netrokona	Barhatta, Durgapur, Kendua, Atpara, Madan, Khaliajuri, Kalmakanda, Mohongonj, Purbadhala, Netrokonasadar -->
+INSERT INTO `thanas` (`id`, `division_id`, `district_id`, `name`, `name_bn`, `slug`, `status`, `created_at`, `updated_at`) VALUES 
+(NULL, '1', '64', 'Belabo', 'Belabo', 'Belabo', '1', NULL, NULL), 
+(NULL, '1', '64', 'Monohardi', 'Monohardi', 'Monohardi', '1', NULL, NULL), 
+(NULL, '1', '64', 'Narsingdisadar', 'Narsingdisadar', 'Narsingdisadar', '1', NULL, NULL), 
+(NULL, '1', '64', 'Palash', 'Palash', 'Palash', '1', NULL, NULL),
+(NULL, '1', '64', 'Raipura', 'Raipura', 'Raipura', '1', NULL, NULL), 
+(NULL, '1', '64', 'Shibpur', 'Shibpur', 'Shibpur', '1', NULL, NULL)
+;
+
+<!-- -------------------------------------------------------------------------- -->
+
+
+
+
+
+
+division['select'] = new Array('select');
+
+division['Dhaka'] = new Array('select','Dhaka','Faridpur','Gazipur','Gopalganj','Jamalpur','Kishoreganj','Madaripur','Manikganj','Munshiganj','Mymensingh','Narayanganj','Norshingdi','Netrokona','Rajbari','Shariatpur','Sherpur','Tangail');
+
+division['Khulna'] = new Array('select','Bagerhat','Chuadanga','Jessore','Jhenaidah','Khulna','Kushtia','Magura','Meherpur','Narail','Satkhira');
+
+division['Sylhet'] = new Array('select','Habiganj','Moulvibazar','Sunamganj','Sylhet');
+
+division['Barisal'] = new Array('select','Barguna','Barisal','Bhola','Jhalokathi',' Patuakhali','Perojpur');
+
+division['Rajshahi'] = new Array('select','Bogra','Chapai Nawabganj','Joypurhat','Naogaon','Natore','Pabna','Rajshahi','Sirajganj');
+
+division['Chittagong'] = new Array('select','Bandarban','Brahmanbaria','Chandpur','Chittagong','Comilla','Cox?s Bazar','Feni','Khagrachari','Laksmipur','Noakhali','Laksmipur','Rangamati');
+
+division['Rangpur'] = new Array('select','Dinajpur','Gaibandha','Kurigram','Lalmonirhat','Nilphamari','Panchagarh','Thakurgaon');
+
+// City lists
+var district = new Array();
+
+district['select'] = new Array();
+district['select']['select'] = new Array('select');
+
+district['Dhaka'] = new Array();
+district['Dhaka']['select'] = new Array('select');
+
+district['Dhaka']['Dhaka'] = new 
+
+Array('select','Adabor','Badda','Bangsal','Bimanbandar','Cantonment','Chak Bazar','Dakshinkhan','Darus Salam','Demra','Dhamrai','Dhanmondi','Dohar','Gendaria','Gulshan','Hazaribagh','Jatrabari','Kadamtali','Kafrul','Kalabagan','Kamrangirchar','Keraniganj','Khilgaon','khilkhet','Kotwali','Lalbagh','Mirpur','Mohammadpur','Motijheel','Nawabganj','Newmarket','Pallabi','Paltan','Ramna','Rampura','Sabujbagh','Savar','Shah Ali','Shahbag','Sher-e-Bangla Nagar','Shyampur','Sutrapur','Tejgaon ','Turag','Uttara','Uttar Khan');
+
+
+district['Dhaka']['Faridpur'] = new Array('select','Alfadanga','Bhanga','Boalmari','Char Bhadrasan','Faridpur Sadar','Madhukhali','Nagarkanda ','Sadarpur','Saltha');                 
+district['Dhaka']['Gazipur'] = new Array('select','Gazipur Sadar','Kaliakoir','Kaliganj','Kapasia','Sreepur');      
+district['Dhaka']['Gopalganj'] = new Array('select','Gopalganj Sadar','Kasiani','Kotalipara','Maksudpur','Tungipara');
+district['Dhaka']['Jamalpur'] = new Array('select','Bakshiganj','Dewanganj','Islampur','Jamalpur Sadar','Madarganj','Melandah','Sharishabari');                
+district['Dhaka']['Kishoreganj'] = new Array('select','Austogram','Bajitpur','Bhairab','Hosainpur','Itna','Karimganj','Katiadi','Kishoreganj Sadar','Kuliarchar','Mithamain','Nikli','Pakundia','Tarail');
+district['Dhaka']['Madaripur'] = new Array('select','Kalkini','Madaripur Sadar','Rajoir','Shibchar');              
+district['Dhaka']['Manikganj'] = new Array('select','Daulatpur','Ghior','Harirampur','Manikganj Sadar','Saturia','Shibalaya','Singair');                  
+district['Dhaka']['Munshiganj'] = new Array('select','Gazaria','Lauhajang','Munshiganj Sadar','Serajdikhan','Sreenagar','Tangibari');     
+district['Dhaka']['Mymensingh'] = new Array('select','Bhaluka','Dhubaura','Fulbaria','Fulpur','Goffargaon','Gouripur','Haluaghat','Iswarganj',' Mymensingh Sadar','Muktagacha','Nandail','Trishal');                  
+district['Dhaka']['Narayanganj'] = new Array('select','Araihazar','Bandar','Narayanganj Sadar','Rupganj','Sonargaon','Fatullah','Siddirganj');                  
+district['Dhaka']['Norshingdi'] = new Array('select','Belabo','Monohardi','Norshingdi Sadar','Palash','Raipura','Shibpur');         
+district['Dhaka']['Netrokona'] = new Array('select','Atpara','Barhatta','Durgapur','Kalmakanda','Kendua','Khaliajuri','Madan','Mohanganj','Netrokona Sadar','Purbadhalal');                  
+district['Dhaka']['Rajbari'] = new Array('select','Baliakandi','Goalunda','Pangsha','Rajbari Sadar','Kalukhale');                                   
+district['Dhaka']['Shariatpur'] = new Array('select','Bhedarganj','Damudiya','Gosairhat','Zajira','Naria','Shariatpur Sadar');                                                                      
+district['Dhaka']['Sherpur'] = new Array('select','Jhenaigati','Nakla','Nalitabari','Sherpur Sadar','Sribordi');                                                                     
+district['Dhaka']['Tangail'] = new Array('select','Bashail','Bhuapur','Delduar','Ghatail','Gopalpur','Kalihati','Mirzapur','Modhupur','Nagarpur','Shakhipur','Tangail Sadar','Dhanbari');
+
+district['Khulna'] = new Array();
+district['Khulna']['select'] = new Array('select');
+district['Khulna']['Bagerhat'] = new Array('select','Bagerhat Sadar','Chitalmari','Fakirhat','Kachua','Mongla','Morelganj','Rampal','Sarankhola');
+district['Khulna']['Chuadanga'] = new Array('select','Alamdanga','Chuadanga Sadar','Damurhuda','Jibannagar')
+district['Khulna']['Jessore'] = new Array('select','Abhoynagar','Bagherpara','Chowgacha','Jessore Sadar','Jhikargacha','Keshabpur','Manirampur','Sharsha');
+district['Khulna']['Jhenaidah'] = new Array('select','Kotchandpur','Harinakunda','Jhenaidah Sadar','Kaliganj','Moheshpur','Shailkupa');
+district['Khulna']['Khulna'] = new Array('select','Batiaghata','Dacope','Dighalia','Dumuria','Phultalaa','Koira','Paikgacha','Rupsa','Terokhada');
+district['Khulna']['Kushtia'] = new Array('select','Bheramara','Daulatpur','Khoksha','Kumarkhali','Kushtia Sadar','Mirpur');
+district['Khulna']['Magura'] = new Array('select','Magura Sadar','Mohammadpur','Shalikha','Sreepur');
+district['Khulna']['Meherpur'] = new Array('select','Gangni','Meherpur Sadar','Mujibnagar');
+district['Khulna']['Narail'] = new Array('select','Kalia','Lohagara','Narail Sadar');
+district['Khulna']['Satkhira'] = new Array('select','Assasuni','Debhata','Kaliganj','Kolaroa','Satkhira Sadar','Shyamnagar','Tala')
+
+
+
+district['Rajshahi'] = new Array();
+district['Rajshahi']['select'] = new Array('select');
+district['Rajshahi']['Bogra'] = new Array('select','Adamdighi','Bogra Sadar','Dhunot','Dhubchanchia','Gabtali','Kahaloo','Nandigram','Sariakandi','Sherpur','Shibganj','Sonatola','Shajahanpur');
+district['Rajshahi']['Chapai Nawabganj'] = new Array('select','Bholahat','Gomastapur','Nachole','Nawabganj Sadar','Shipganj');
+district['Rajshahi']['Joypurhat'] = new Array('select','Akkelpur','Joypurhat Sadar','Kalai','Khetlal','Panchbibi');
+district['Rajshahi']['Naogaon'] = new Array('select','Atrai','Badalgachi','Dhamoirhat','Manda','Mahadebpur','Naogaon Sadar','Niamatpur','Patnitala','Porsha','Raninagar','Shapahar');
+district['Rajshahi']['Natore'] = new Array('select','Baghatipara','Baraigram','Gurudaspur','Lalpur','Natore Sadar','Singra');
+district['Rajshahi']['Pabna'] = new Array('select','Atgharia','Bera','Bhangura','Chatmohar','Faridpur','Iswardi','Pabna Sadar','Santhia','Santhiar');
+district['Rajshahi']['Rajshahi'] = new Array('select','Bagha','Bagmara','Charghat','Durgapur','Godagari','Mohanpur','Paba','Putia','Tanore');
+district['Rajshahi']['Sirajganj'] = new Array('select','Belkuchi','Chowhali','Kamarkhanda','Kazipur','Raiganj','Shahajadpur','Serajganj Sadar','Tarash','Ullapara');
+
+
+district['Sylhet'] = new Array();
+district['Sylhet']['select'] = new Array('select');
+district['Sylhet']['Habiganj'] = new Array('select','Ajmeriganj','Bahubal','Baniachang','Chunarughat','Habiganj Sadar','Lakhai','Madhabpur','Nabiganj');
+district['Sylhet']['Moulvibazar'] = new Array('select','Barlekha','Kamalganj','Kulaura','Moulvibazar Sadar','Rajnagar','Sreemongal','Juri');
+district['Sylhet']['Sylhet'] = new Array('select','Balaganj','Beanibazar','Biswanath','Companyganj','Fenchuganj','Gowainghat','Golapganj','Jaintapur','Zakiganj','Kanaighat','Sylhet Sadar','South Surma');
+district['Sylhet']['Sunamganj'] = new Array('select','Biswambharpur','Chattak','Derai','Dharmapasha','Dowarabazar','Jagannathpur','Jamalganj','Sulla','Sunamganj Sadar','Taherpur','South Sunamganj');
+
+
+district['Barisal'] = new Array();
+district['Barisal']['select'] = new Array('select');
+district['Barisal']['Barguna'] = new Array('select','Amtali','Bamna','Barguna Sadar','Betagi','Patharghata');
+district['Barisal']['Barisal'] = new Array('select','Agailjhara','Babuganj','Bakerganj','Banaripara','Barisal Sadar','Gournadi','Hijla','Mehendiganj','Muladi','Wazirpur');
+district['Barisal']['Bhola'] = new Array('select','Bhola Sadar','Borhanuddin','Charfession','Daulatkhan','Lalmohan','Manpura','Tajumuddin');
+district['Barisal']['Jhalokathi'] = new Array('select','Jhalokathi Sadar','Kathalia','Nalchiti','Rajapur');
+district['Barisal']['Patuakhali'] = new Array('select','Bauphal','Dasmina','Dumki','Galachipa','Kalapara','Mirjaganj','Patuakhali Sadar');
+district['Barisal']['Perojpur'] = new Array('select','Bhandaria','Kaukhali','Mothbaria','Nesarabad (Shawrupkathi)','Nazirpur','Perojpur Sadar','Zia Nagar (Indurkani)');
+
+
+district['Chittagong'] = new Array();
+district['Chittagong']['select'] = new Array('select');
+district['Chittagong']['Bandarban'] = new Array('select','Ali Kadam','Bandarban Sadar','Lama','Nakhoyngchari','Rawanchari','Ruma','Thanchi');
+district['Chittagong']['Brahmanbaria'] = new Array('select','Akhaura','Ashuganj','Bancharampur','Brahmanbaria Sadar','Kashba','Nabinagar','Nasirnagar','Sarail');
+district['Chittagong']['Chandpur'] = new Array('select','Chandpur Sadar','Faridganj','Haimchar','Hajiganj','Kachua','Matlab (South)','Matlab (North)(Chengarchar)','Shahrasti');
+district['Chittagong']['Chittagong'] = new Array('select','Anwara','Banshkhali','Boalkhali','Chandanaish','Fatikchari','Hathazari','Lohagara','Mirsarai','Patiya','Rangunia','Raujan','Sandwip','Satkania','Sitakundu');
+district['Chittagong']['Comilla'] = new Array('select','Barura','Brahmanpara','Burichang','Chandina','Chowddagram','Comilla Sadar','Daudkandi','Debiduar','Homna','Laksam','Meghna','Muradnagar','Nangolkot','Titas','Monoharganj','Comilla Sadar South');
+district['Chittagong']['Cox?s Bazar'] = new Array('select','Chakoria','Cox?s Bazar Sadar','Kutubdia','Moheshkhali','Pekua','Ramu','Teknaf','Ukhia');
+district['Chittagong']['Feni'] = new Array('select','Chagalnayya','Daganbhuiyan','Feni Sadar','Parshuram','Fulgazi','Sonagazi');
+district['Chittagong']['Khagrachari'] = new Array('select','Dighinala','Khagrachari Sadar','Laksmichari','Mohalchari','Manikchari','Matiranga','Panchari','Ramgor');
+district['Chittagong']['Laksmipur'] = new Array('select','Laksmipur Sadar','Ramgati','Ramganj','Raipur','Kamalnagar');
+district['Chittagong']['Noakhali'] = new Array('select','Begumganj','Chatkhil','Companiganj','Hatiya','Noakhali Sadar(Sudharam)','Sonaimuri','Subarnachar','Kabir Hat');
+district['Chittagong']['Rangamati'] = new Array('select','Baghaichari','Barkal','Belaichari','Jurachari','Kaptai','Kawkhali','Langadu','Naniarchar ','Rajasthali','Rangamati SadarRangamati Sadar');
+
+district['Rangpur'] = new Array();
+district['Rangpur']['select'] = new Array('select');
+district['Rangpur']['Dinajpur'] = new Array('select','Birampur','Birganj','Birol','Bochaganj','Chirirbandar','Dinajpur Sadar','Phulbari','Ghoraghat','Hakimpur','Kaharole','Khanshama','Nawabganj','Parbatipur');
+district['Rangpur']['Gaibandha'] = new Array('select','Fulchari','Gaibandha Sadar','Gobindaganj','Palashbari','Sadullapur','Shaghatta','Sundarganj');
+district['Rangpur']['Kurigram'] = new Array('select','Bhurungamari','Chilmary','Fulbari','Kurigram Sadar','Nageswari','Rajarhat','Rajibpur','Rowmari','Ulipur');
+district['Rangpur']['Lalmonirhat'] = new Array('select','Aditmari','Hatibandha','Kaliganj','Lalmonirhat Sadar','Patgram');
+district['Rangpur']['Nilphamari'] = new Array('select','Dimla','Domar','Jaldhaka','Kishoreganj','Nilphamari Sadar','Saidpur');
+district['Rangpur']['Panchagarh'] = new Array('select','Atwari','Boda','Debiganj','Panchagarh Sadar','Tetulia');
+district['Rangpur']['Rangpur'] = new Array('select','Badarganj','Gangachara','Kaunia','Mithapukur','Pirgacha','Pirganj','Rangpur Sadar','Taraganj');
+district['Rangpur']['Thakurgaon'] = new Array('select','Baliadangi','Haripur','Pirganj','Ranishankail','Thakurgaon Sadar');

@@ -3,69 +3,49 @@
         <div class="container">
             
             <div class="row content-ro">
-                <div class="col-lg-4 col-md-12 footer-contact">
-                    <h2>Contact Informatins</h2>
+                <div class="col-lg-3 col-md-12 mb-5 footer-contact">
+                    <h2 class="mb-4">Contact Informatins</h2>
                     <div class="address-row">
-                        <div class="icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="detail">
-                            <p>46-29 Indra Street, Southernbank, Tigaione, Toranto, 3006 Canada</p>
-                        </div>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> 
+                            Bipus, Mirzapur, Tangail
+                        </p>
                     </div>
                     <div class="address-row">
-                        <div class="icon">
-                            <i class="far fa-envelope"></i>
-                        </div>
-                        <div class="detail">
-                            <p>sales@smarteyeapps.com <br> support@smarteyeapps.com</p>
-                        </div>
+                        <p><i class="far fa-envelope"></i> contact@picodeit.com</p>
                     </div>
                     <div class="address-row">
-                        <div class="icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="detail">
-                            <p>+91 9751791203 <br> +91 9159669599</p>
-                        </div>
+                        <p><i class="fas fa-phone"></i> +8801686-254438</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 footer-links">
-                   <div class="row no-margin mt-2">
-                    <h2>Quick Links</h2>
-                    <ul>
-                        <li>Home</li>
-                        <li>About Us</li>
-                        <li>Contacts</li>
-                        <li>Pricing</li>
-                        <li>Gallery</li>
-                        <li>eatures</li>
-
+                <div class="col-lg-3 col-md-12 mb-5">
+                    <h2 class="mb-4">Quick Links</h2>
+                   <div class="address-row">
+                    <ul class="">
+                        <li><a class="text-light" href="/">Home</a></li>
+                        <li><a class="text-light" href="#about">About Us</a></li>
+                        <li><a class="text-light" href="#gallery">Gallery</a></li>
+                        <!-- <li><a class="text-light" href="#process">Process</a></li> -->
+                        <li><a class="text-light" href="#contact">Contact US</a></li>
                     </ul>
                     </div>
-                   <div class="row no-margin mt-1">
-                       <h2 class="m-t-2">More Products</h2>
-                     <ul>
-                        <li>Forum PHP Script</li>
-                        <li>Edu Smart</li>
-                        <li>Smart Event</li>
-                        <li>Smart School</li>
-
-
-                    </ul>
-                   </div>
-
                 </div>
-                <div class="col-lg-4 col-md-12 footer-form">
+                <div class="col-lg-6 col-md-12 footer-form">
                     <div class="form-card">
-                        <div class="form-title">
-                            <h4>Quick Message</h4>
+                        <div class="text-center pt-3 mt-4">
+                            <h4 class="text-dark">Quick Message</h4>
                         </div>
                         <div class="form-body">
-                            <input type="text" placeholder="Enter Name" class="form-control">
-                            <input type="text" placeholder="Enter Mobile no" class="form-control">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" placeholder="Enter Name" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" placeholder="Enter Mobile no" class="form-control"> 
+                                </div>
+                            </div>
                             <input type="text" placeholder="Enter Email Address" class="form-control">
-                            <input type="text" placeholder="Your Message" class="form-control">
+                            <textarea placeholder="Your Message" class="form-control"></textarea>
                             <button class="btn btn-sm btn-primary w-100">Send Request</button>
                         </div>
                     </div>
@@ -73,10 +53,10 @@
             </div>
             <div class="footer-copy">
                 <div class="row">
-                    <div class="col-lg-8 col-md-6">
-                        <p>Copyright © <a href="https://www.smarteyeapps.com">Smarteyeapps.com</a> | All right reserved.</p>
+                    <div class="_col-lg-8 col-md-12 text-center">
+                        <p>Copyright © <a href="https://www.picodeit.com">picodeit.com</a> | All right reserved.</p>
                     </div>
-                    <div class="col-lg-4 col-md-6 socila-link">
+                    <!-- <div class="col-lg-4 col-md-6 socila-link">
                         <ul>
                             <li><a><i class="fab fa-github"></i></a></li>
                             <li><a><i class="fab fa-google-plus-g"></i></a></li>
@@ -84,7 +64,7 @@
                             <li><a><i class="fab fa-twitter"></i></a></li>
                             <li><a><i class="fab fa-facebook-f"></i></a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

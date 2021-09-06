@@ -30,9 +30,9 @@
                             <p>Blood Group- 
                                 <span class="text-danger border p-1 rounded-circle">{{ $user->blood_group }}</span>
                             </p>
-                            <p>Division-{{ $user->division_id }}</p>
-                            <p>District-{{ $user->district_id }}</p>
-                            <p>Thana-{{ $user->thana_id }}</p>
+                            <p>Division-{{ $user->division->name }}</p>
+                            <p>District-{{ $user->district->name }}</p>
+                            <p>Thana-{{ $user->thana->name }}</p>
                             
                         </div>
                         <div class="mt-1">

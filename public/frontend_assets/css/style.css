@@ -439,7 +439,8 @@ footer {
         border-top: 1px solid #cccccc5; }
         footer .content-ro .form-card .form-body input {
           border-radius: 0px;
-          height: 47px; }
+          /*height: 47px; */
+        }
   footer .footer-copy {
     padding: 30px 0px;
     color: #FFF;

@@ -30,9 +30,9 @@ class UserController extends Controller
             'phone' => 'required', 'email' => 'required', 
             'blood_group' => 'required', 
             'gender' => 'required', 
-            'division' => 'required', 
-            'district' => 'required', 
-            'thana' => 'required',
+            'division_id' => 'required', 
+            'district_id' => 'required', 
+            'thana_id' => 'required',
         ]);
 
         $user = new User;
@@ -54,9 +54,9 @@ class UserController extends Controller
         $user->gender = $request->gender;
         $user->blood_group = $request->blood_group; 
         $user->date_of_birth = $request->date_of_birth;
-        $user->division = $request->division; 
-        $user->district = $request->district; 
-        $user->thana = $request->thana;
+        $user->division_id = $request->division_id; 
+        $user->district_id = $request->district_id; 
+        $user->thana_id = $request->thana_id;
         $user->password = Hash::make($request->password);
 
 
@@ -83,15 +83,16 @@ class UserController extends Controller
 
     public function update(Request $request, $id)
     {
+        // return $request;
         $this->validate($request, [
             'name' => 'required',
             'date_of_birth' => 'required', 
             'phone' => 'required', 'email' => 'required', 
             'blood_group' => 'required', 
             'gender' => 'required', 
-            'division' => 'required', 
-            'district' => 'required', 
-            'thana' => 'required'
+            'division_id' => 'required', 
+            'district_id' => 'required', 
+            'thana_id' => 'required'
         ]);
 
         $user = User::find($id);
@@ -115,10 +116,13 @@ class UserController extends Controller
         $user->gender = $request->gender;
         $user->blood_group = $request->blood_group; 
         $user->date_of_birth = $request->date_of_birth;
-        $user->division = $request->division; 
-        $user->district = $request->district; 
-        $user->thana = $request->thana;
+        $user->division_id = $request->division_id; 
+        $user->district_id = $request->district_id; 
+        $user->thana_id = $request->thana_id;
+        $user->donate_date = $request->donate_date;
         $user->status = $request->status;
+
+        // return $user;
         
         try{
             $user->save();

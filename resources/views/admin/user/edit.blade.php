@@ -21,6 +21,11 @@
                 <form method="POST" action="{{route('admin.user.update', $user->id)}}" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
+                    <?php 
+                        $divisions =  \App\Models\Division::orderBy('id', 'desc')->get();
+                        $district =  \App\Models\District::where('id', $user->district_id)->first();
+                        $thana =  \App\Models\Thana::where('id', $user->district_id)->first();
+                    ?>
                     <div class="card-body pb-0">
                         <div class="row">
                             <div class="col-lg-12 card-body">
@@ -31,7 +36,7 @@
                                     </div>
                                     <div class="col-md-3">
                                         <label class="mb-0">Date of Birth<span class="text-danger">*</span> </label>
-                                        <input type="text" value="{{ $user->date_of_birth }}" name="date_of_birth" class="form-control mb-2 ">
+                                        <input type="date" value="{{ $user->date_of_birth }}" name="date_of_birth" class="form-control mb-2 ">
                                     </div>
                                     <div class="col-md-3">
                                         <label class="mb-0">Phone<span class="text-danger">*</span> </label>
@@ -80,19 +85,29 @@
 
                                     <div class="col-md-3">
                                         <label class="mb-0">Division<span class="text-danger">*</span> </label>
-                                        <input type="text" name="division" value="{{ $user->division }}" placeholder="Division" class="form-control mb-2 ">
+                                        <select class="form-control-sm w-100" name="division_id" id="division_selector" onchange="divisionChange(this);">
+                                            @foreach($divisions as $division)
+                                                <option value="{{ $division->id }}" {{ $user->division_id == $division->id ? 'selected':'' }}>
+                                                    {{ $division->name }}
+                                                </option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                     <div class="col-md-3">
                                         <label class="mb-0">District<span class="text-danger">*</span> </label>
-                                        <input type="text" name="district" value="{{ $user->district }}" placeholder="District" class="form-control mb-2 ">
+                                        <select class="form-control-sm w-100" name="district_id"  onchange="districtChange(this);" id="district_id">
+                                            <option value="{{ $district->id }}">{{ $district->name }}</option>
+                                        </select>
                                     </div>
                                     <div class="col-md-3">
                                         <label class="mb-0">Thana<span class="text-danger">*</span> </label>
-                                        <input type="text" name="thana" value="{{ $user->thana }}" placeholder="Thana" class="form-control mb-2 ">
+                                        <select class="form-control-sm w-100" name="thana_id" id="thana_id">
+                                            <option value="{{ $thana->id }}">{{ $thana->name }}</option>
+                                        </select>
                                     </div>
                                     <div class="col-md-3">
                                         <label class="mb-0">Donate Date<span class="text-danger">*</span> </label>
-                                        <input type="text" name="donate_date" value="{{ $user->donate_date }}" class="form-control mb-2 ">
+                                        <input type="date" name="donate_date" value="{{ $user->donate_date }}" class="form-control mb-2 ">
                                     </div>
 
                                     <div class="col-md-6">
@@ -137,10 +152,55 @@
 @push('scripts')
 <script src="{{asset('backend_assets/plugins/summernote/summernote-bs4.min.js')}}"></script>
 <script>
-    $(function () {
-            // Summernote
-            $('.textarea').summernote()
-        })
-    </script>
-    @endpush
+$(function () {
+        // Summernote
+        $('.textarea').summernote()
+    })
+</script>
+<script type="text/javascript">
+    function divisionChange(div)
+    {
+        var div_id = div.value;
+        let sel = document.getElementById('district_id');
+        $("#district_id").html("");
+        $.ajax({
+            url: "{{route('division_selector')}}",
+            method: "POST",
+            dataType: "JSON",
+            data: {div_id:div_id, _token: '{{csrf_token()}}'},
+            success: function (data) {
+                  sel.innerHTML += `<option value=""> Select District </option>`
+                for (i = 0; i < data.length; i++) {
+                  sel.innerHTML += `<option value="${data[i].id}"> ${data[i].name} </option>`
+                }
+            },
+            error: function() {
+                console.log(data);
+            }
+        });
+    }
+
+    function districtChange(dis)
+    {
+        var dis_id = dis.value;
+        let sels = document.getElementById('thana_id');
+        $("#thana_id").html("");
+        $.ajax({
+            url: "{{route('district_selector')}}",
+            method: "POST",
+            dataType: "JSON",
+            data: {dis_id:dis_id, _token: '{{csrf_token()}}'},
+            success: function (data) {
+                sels.innerHTML += `<option value=""> Select Thana </option>`
+                for (i = 0; i < data.length; i++) {
+                  sels.innerHTML += `<option value="${data[i].id}"> ${data[i].name} </option>`
+                }
+            },
+            error: function() {
+                console.log(data);
+            }
+        });
+    }
+</script>
+@endpush
 

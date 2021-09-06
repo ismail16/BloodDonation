@@ -29,11 +29,11 @@
 
 		<li class="nav-item dropdown">
 			<a href="#" class="_dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-				<img src="{{ asset('images/profile_image/default.jpg') }}" class="user-image img-circle user_small_image_admin" alt="User Image" style="height: 40px;">
+				<img src="{{ asset('images/default.png') }}" class="user-image img-circle user_small_image_admin" alt="User Image" style="height: 40px;">
 			</a>
 			<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 				<span class="dropdown-item dropdown-header">
-					<img src="{{ asset('images/profile_image/default.jpg') }}" class="img-circle user_image_admin" alt="User Image">
+					<img src="{{ asset('images/default.png') }}" class="img-circle user_image_admin" alt="User Image">
 					<h4>Name</h4>
 					<p>
 						Admin 

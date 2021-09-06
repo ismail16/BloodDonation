@@ -7,28 +7,6 @@
     <form class="" action="{{ route('search_blood') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="row d-flex justify-content-center mt-1 mb-1 p-2">
-            <div class="col-sm-6 col-md-2 col-lg-2 search_option">
-                <h6 class="mb-1 form-label">Division</h6>
-                <select class="form-control-sm w-100" name="division_id" id="division_selector" onchange="divisionChange(this);">
-                   @foreach($divisions as $division)
-                    <option value="{{ $division->id }}">
-                        {{ $division->name }}
-                    </option>
-                    @endforeach
-                </select>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-2 search_option">
-                <h6 class="mb-1 form-label">District</h6>
-                <select class="form-control-sm w-100" name="district_id"  onchange="districtChange(this);" id="district_id">
-                </select>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-2 search_option">
-                <h6 class="mb-1 form-label">Thana</h6>
-                <select class="form-control-sm w-100" name="thana_id" id="thana_id">
-                </select>
-            </div>
             <div class="col-sm-6 col-md-4 col-lg-2 search_option">
                 <h6 class="mb-1 form-label">Blood Group</h6>
                 <select class="form-control-sm w-100" name="blood_group">
@@ -40,6 +18,27 @@
                     <option value="AB-">AB-</option>
                     <option value="O+">O+</option>
                     <option value="O-">O-</option>
+                </select>
+            </div>
+            <div class="col-sm-6 col-md-2 col-lg-2 search_option">
+                <h6 class="mb-1 form-label">Division</h6>
+                <select class="form-control-sm w-100" name="division_id" id="division_selector" onchange="divisionChange(this);">
+                   @foreach($divisions as $division)
+                    <option value="{{ $division->id }}">
+                        {{ $division->name }}
+                    </option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 search_option">
+                <h6 class="mb-1 form-label">District</h6>
+                <select class="form-control-sm w-100" name="district_id"  onchange="districtChange(this);" id="district_id">
+                </select>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-2 search_option">
+                <h6 class="mb-1 form-label">Thana</h6>
+                <select class="form-control-sm w-100" name="thana_id" id="thana_id">
                 </select>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-1 d-flex align-items-center d-flex justify-content-center">

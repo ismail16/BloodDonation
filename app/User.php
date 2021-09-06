@@ -31,7 +31,7 @@ class User extends Authenticatable
 
 
     protected $fillable = [
-        'name', 'phone', 'email', 'gender','blood_group', 'date_of_birth', 'division', 'district', 'thana', 'password',
+        'name', 'phone', 'email', 'gender','blood_group', 'date_of_birth', 'division_id', 'district_id', 'thana_id', 'donate_date', 'password',
     ];
 
     protected $hidden = [
