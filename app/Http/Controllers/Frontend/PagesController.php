@@ -37,6 +37,9 @@ class PagesController extends Controller
         $thana_id = $request->thana_id;
         $blood_group = $request->blood_group;
 
+
+        // return $request;
+
         if ($district_id && $thana_id) {
             $search_results = User::orderByDesc('id')
                 ->Where('division_id',$division_id)

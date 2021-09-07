@@ -85,6 +85,7 @@
                                     <div class="col-md-3">
                                         <label class="mb-0">Division<span class="text-danger">*</span> </label>
                                         <select class="form-control" name="division_id" id="division_selector" onchange="divisionChange(this);">
+                                            <option>Select Division</option>
                                             @foreach($divisions as $division)
                                                 <option value="{{ $division->id }}">
                                                     {{ $division->name }}

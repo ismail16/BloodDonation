@@ -10,7 +10,12 @@
 <div class="row d-flex justify-content-center pb-5 mb-5">
 <div class="col-sm-12 col-md-6 col-lg-6 mt-3 mb-5">
     <form action="{{ route('register') }}" method="post" enctype="multipart/form-data">
-        @csrf                
+        @csrf
+        <?php 
+            $divisions =  \App\Models\Division::orderBy('id', 'desc')->get();
+            // $district =  \App\Models\District::where('id', $user->district_id)->first();
+            // $thana =  \App\Models\Thana::where('id', $user->district_id)->first();
+        ?>                
         <div class="row card">
             @if(session()->has('success'))
             <div class="col-lg-12 col-xl-12 d-flex justify-content-center">
@@ -61,14 +66,28 @@
                         </select>
                     </div>
 
-                    <div class="col-md-12">
-                        <input type="text" name="division" value="" placeholder="Division*" class="form-control mb-2 ">
+                    <div class="col-md-6">
+                        <!-- <label class="mb-0">Division<span class="text-danger">*</span> </label> -->
+                        <select class="form-control" name="division_id" id="division_selector" onchange="divisionChange(this);">
+                            <option>Select Division</option>
+                            @foreach($divisions as $division)
+                                <option value="{{ $division->id }}">
+                                    {{ $division->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- <label class="mb-0">District<span class="text-danger">*</span> </label> -->
+                        <select class="form-control" name="district_id"  onchange="districtChange(this);" id="district_id">
+                            <option>Select District</option>
+                        </select>
                     </div>
                     <div class="col-md-12">
-                        <input type="text" name="district" value="" placeholder="District*" class="form-control mb-2 ">
-                    </div>
-                    <div class="col-md-12">
-                        <input type="text" name="thana" value="" placeholder="Thana*" class="form-control mb-2 ">
+                        <!-- <label class="mb-0">Thana<span class="text-danger">*</span> </label> -->
+                        <select class="form-control" name="thana_id" id="thana_id">
+                            <option>Select Thana</option>
+                        </select>
                     </div>
                     <div class="col-md-6">
                         <input id="password" type="password" class="form-control mb-2 @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="password">
@@ -101,5 +120,50 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
 <script>
    
+</script>
+<script type="text/javascript">
+    function divisionChange(div)
+    {
+        var div_id = div.value;
+        let sel = document.getElementById('district_id');
+        $("#district_id").html("");
+        $.ajax({
+            url: "{{route('division_selector')}}",
+            method: "POST",
+            dataType: "JSON",
+            data: {div_id:div_id, _token: '{{csrf_token()}}'},
+            success: function (data) {
+                  sel.innerHTML += `<option value=""> Select District </option>`
+                for (i = 0; i < data.length; i++) {
+                  sel.innerHTML += `<option value="${data[i].id}"> ${data[i].name} </option>`
+                }
+            },
+            error: function() {
+                console.log(data);
+            }
+        });
+    }
+
+    function districtChange(dis)
+    {
+        var dis_id = dis.value;
+        let sels = document.getElementById('thana_id');
+        $("#thana_id").html("");
+        $.ajax({
+            url: "{{route('district_selector')}}",
+            method: "POST",
+            dataType: "JSON",
+            data: {dis_id:dis_id, _token: '{{csrf_token()}}'},
+            success: function (data) {
+                sels.innerHTML += `<option value=""> Select Thana </option>`
+                for (i = 0; i < data.length; i++) {
+                  sels.innerHTML += `<option value="${data[i].id}"> ${data[i].name} </option>`
+                }
+            },
+            error: function() {
+                console.log(data);
+            }
+        });
+    }
 </script>
 @endpush

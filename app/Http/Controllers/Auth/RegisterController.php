@@ -44,9 +44,9 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'blood_group' => $data['blood_group'],
             'gender' => $data['gender'],
-            'division' => $data['division'],
-            'district' => $data['district'],
-            'thana' => $data['thana'],
+            'division_id' => $data['division_id'],
+            'district_id' => $data['district_id'],
+            'thana_id' => $data['thana_id'],
             'password' => Hash::make($data['password']),
             'verifyToken' => Str::random(40),
         ]);

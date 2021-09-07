@@ -16,17 +16,35 @@
                     </div>
                     <div class="col-lg-6 col-md-12 d-flex justify-content-center">
                         <ul class="ulright">
-                            <li>
-                                <i class="fa fa-tint"></i>
-                                <a href="{{ route('register') }}" class="text-white">
-                                    Donate Blood
-                                </a>
-                                <span>|</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-user"></i>
-                                <a href="{{ route('login') }}" class="text-white">Login</a>
-                            </li>
+
+                            @if (Route::has('login'))
+                                @auth
+                                    <li>
+                                    <a href="{{ route('doner.profile') }}" class="text-white">
+                                        <i class="fas fa-user"></i> Profile
+                                    </a>
+                                    </li>
+                                    <li><a href="{{ route('logout') }}" class="text-white"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <i class="fas fa-key" title="Logout"></i> Logout
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                    </li>
+                                @else
+                                    <li>
+                                        <i class="fa fa-tint"></i>
+                                        <a href="{{ route('register') }}" class="text-white">
+                                            Donate Blood
+                                        </a>
+                                        <span>|</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-user"></i>
+                                        <a href="{{ route('login') }}" class="text-white">Login</a>
+                                    </li>
+                                @endauth
+                            @endif
                         </ul>
                     </div>
                 </div>
@@ -36,7 +54,9 @@
             <div class="container">
                 <div class="row nav-row">
                     <div class="col-md-3 logo">
-                        <img src="{{ asset('frontend_assets/images/logo.jpg')}}" alt="">
+                        <a href="/">
+                            <img src="{{ asset('frontend_assets/images/logo.jpg')}}" alt="">
+                        </a>
                     </div>
                     <div class="col-md-9 nav-col">
                         <nav class="navbar navbar-expand-lg navbar-light">

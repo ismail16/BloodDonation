@@ -23,6 +23,9 @@
             <div class="col-sm-6 col-md-2 col-lg-2 search_option">
                 <h6 class="mb-1 form-label">Division</h6>
                 <select class="form-control-sm w-100" name="division_id" id="division_selector" onchange="divisionChange(this);">
+                    <option>
+                        Select Division
+                    </option>
                    @foreach($divisions as $division)
                     <option value="{{ $division->id }}">
                         {{ $division->name }}

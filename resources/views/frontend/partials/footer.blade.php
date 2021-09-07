@@ -71,12 +71,11 @@
     </footer>
     
     
-</body>
-
-    
+</body>    
     <script src="{{ asset('frontend_assets/js/popper.min.js')}}"></script>
     <script src="{{ asset('frontend_assets/js/bootstrap.min.js')}}"></script>
     <script src="{{ asset('frontend_assets/js/grid-gallery.min.js')}}"></script>
     <script src="{{ asset('frontend_assets/js/jquery-scrolltofixed-min.js')}}"></script>
     <script src="{{ asset('frontend_assets/js/script.js')}}"></script>
+    @stack('scripts')
 </html>

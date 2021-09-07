@@ -27,8 +27,8 @@ Route::group(['as'=>'admin.', 'prefix'=>'admin', 'namespace'=>'Admin', 'middlewa
 });
 
 //Student Route
-Route::group(['as'=>'student.', 'prefix'=>'student', 'namespace'=>'Student', 'middleware'=>['auth','student']], function(){
-    Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-    Route::resource('profile', 'StudentController');
-    Route::resource('profile', 'StudentController');
+Route::group(['as'=>'doner.', 'prefix'=>'doner', 'namespace'=>'Doner', 'middleware'=>['auth','doner']], function(){
+    Route::get('profile', 'ProfileController@index')->name('profile');
+    // Route::resource('profile', 'StudentController');
+    // Route::resource('profile', 'StudentController');
 });

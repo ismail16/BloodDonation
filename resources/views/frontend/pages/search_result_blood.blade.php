@@ -23,7 +23,7 @@
                 @endif
                 <div class="row p-1">
                     <div class="col-md-8 pl-2">
-                        <div class="border-bottom">
+                        <div class="">
                             <p>Name-<a href="" class="as3_name">{{ $user->name }}</a>
                             <p>Age- <span>{{ date_diff(date_create($user->date_of_birth), date_create('now'))->y }} yrs</span></p>
                             <p>Gender- <span>{{ $user->gender }}</span></p>
@@ -33,14 +33,6 @@
                             <p>Division-{{ $user->division->name }}</p>
                             <p>District-{{ $user->district->name }}</p>
                             <p>Thana-{{ $user->thana->name }}</p>
-                            
-                        </div>
-                        <div class="mt-1">
-                            <span class="text-danger">Mobile : </span> 
-                            <span>{{ $user->phone }}</span> <br>
-
-                            <span class="text-danger">E-mail : </span> 
-                            <span>{{ $user->email }}</span> <br>
                         </div>
                     </div>
                     <div class="col-md-4 pr-0 ">
@@ -49,7 +41,13 @@
                         @else
                             <img src="{{ asset('images/profile_image/default.png') }}" class="img-fluid image-size">
                         @endif
-                        
+                    </div>
+                    <div class="col-md-12 mt-2 pt-2 mb-2 border-top">
+                        <span class="text-danger">Mobile : </span> 
+                        <span>{{ $user->phone }}</span> <br>
+
+                        <span class="text-danger">E-mail : </span> 
+                        <span>{{ $user->email }}</span> <br>
                     </div>
                 </div>
             </div>
