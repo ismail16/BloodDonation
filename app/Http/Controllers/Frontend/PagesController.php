@@ -35,7 +35,7 @@ class PagesController extends Controller
         $search_results = User::orderByDesc('id')
                 ->Where('status',1)
                 ->Where('role_id',2)
-                ->paginate(1);
+                ->paginate(9);
         return view('frontend.pages.search_result_blood', compact('search_results'));
     }
 
@@ -54,7 +54,7 @@ class PagesController extends Controller
                 ->Where('blood_group', $blood_group)
                 ->Where('status',1)
                 ->Where('role_id',2)
-                ->paginate(1);
+                ->paginate(9);
         }else if ($district_id) {
             $search_results = User::orderByDesc('id')
                 ->Where('division_id',$division_id)
@@ -62,7 +62,7 @@ class PagesController extends Controller
                 ->Where('blood_group', $blood_group)
                 ->Where('status',1)
                 ->Where('role_id',2)
-                ->paginate(1);
+                ->paginate(9);
         }else if ($thana_id) {
             $search_results = User::orderByDesc('id')
                 ->Where('division_id',$division_id)
@@ -70,7 +70,7 @@ class PagesController extends Controller
                 ->Where('blood_group', $blood_group)
                 ->Where('status',1)
                 ->Where('role_id',2)
-                ->paginate(1);
+                ->paginate(9);
         }else if ($division_id) {
             $search_results = User::orderByDesc('id')
                 ->Where('division_id',$division_id)
@@ -78,13 +78,13 @@ class PagesController extends Controller
                 ->Where('blood_group', $blood_group)
                 ->Where('status',1)
                 ->Where('role_id',2)
-                ->paginate(1);
+                ->paginate(9);
         }else{
              $search_results = User::orderByDesc('id')
                 ->Where('blood_group', $blood_group)
                 ->Where('status',1)
                 ->Where('role_id',2)
-                ->paginate(1);
+                ->paginate(9);
         }
 
 
