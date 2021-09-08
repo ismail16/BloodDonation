@@ -22,7 +22,7 @@
 			<a class="nav-link" href="">
 				<i class="far fa-comments"></i>
 				<span class="badge badge-warning navbar-badge font-weight-bold ">
-				3
+				{{ \App\Models\Contact::where('status', 0)->count() }}
 				</span>
 			</a>
 		</li>

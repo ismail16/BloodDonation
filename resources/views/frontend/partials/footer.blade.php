@@ -23,8 +23,8 @@
                    <div class="address-row">
                     <ul class="">
                         <li><a class="text-light" href="/">Home</a></li>
-                        <li><a class="text-light" href="#about">About Us</a></li>
-                        <li><a class="text-light" href="#gallery">Gallery</a></li>
+                        <li><a class="text-light" href="{{ '/' }}#about">About Us</a></li>
+                        <li><a class="text-light" href="{{ '/' }}#gallery">Gallery</a></li>
                         <!-- <li><a class="text-light" href="#process">Process</a></li> -->
                         <li><a class="text-light" href="#contact">Contact US</a></li>
                     </ul>
@@ -35,19 +35,22 @@
                         <div class="text-center pt-3 mt-4">
                             <h4 class="text-dark">Quick Message</h4>
                         </div>
+                        <form action="{{ route('contact_us_post') }}" method="post">
+                        @csrf
                         <div class="form-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Enter Name" class="form-control">
+                                    <input type="text" name="name" placeholder="Enter Name" class="form-control">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Enter Mobile no" class="form-control"> 
+                                    <input type="text" name="phone"  placeholder="Enter Mobile no" class="form-control"> 
                                 </div>
                             </div>
-                            <input type="text" placeholder="Enter Email Address" class="form-control">
-                            <textarea placeholder="Your Message" class="form-control"></textarea>
+                            <input type="email" name="email" placeholder="Enter Email Address" class="form-control">
+                            <textarea placeholder="Your Message" name="message" rows="3" class="form-control"></textarea>
                             <button class="btn btn-sm btn-primary w-100">Send Request</button>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -3,6 +3,16 @@
 
 @section('content')
 @include('frontend.partials.search_bar')
+@if(session()->has('message'))
+    @if(session()->has('message'))
+    <div class="col-lg-12 col-xl-12 d-flex justify-content-center" style="position: absolute; z-index: 99;">
+        <div class="alert alert-success text-center pr-3 pl-3 p-1 mb-1">
+            {{session('message')}}
+            <button type="button" class="close ml-4 text-danger" data-dismiss="alert">&times;</button>
+        </div>
+    </div>
+    @endif
+@endif
 
 <div class="slider-detail">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -15,12 +25,14 @@
                 <img class="d-block w-100" src="{{ asset('frontend_assets/images/slide-02.jpg')}}" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h5 class=" bounceInDown">Donate Blood & Save a Life</h5>
-                    <p class=" bounceInLeft">Lorem ipsum dolor sit amet,    consectetur adipiscing elit. Nullam justo neque, <br>
-                        aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis <br>
-                    sed sagittis at, sagittis quis neque. Praesent.</p>
+                    <p class=" bounceInLeft">Love Yourself But Love Others Too. Express Your Love For Them By Donating Blood.</p>
                     <div class=" vbh">
-                        <div class="btn btn-success  bounceInUp"> Book Appointment </div>
-                        <div class="btn btn-success  bounceInUp"> Contact US </div>
+                        <div class="btn btn-danger  bounceInUp"> 
+                           <a href="{{ route('register') }}" class="text-white"> Donate Now </a>
+                        </div>
+                        <div class="btn btn-danger  bounceInUp">
+                            <a href="#contact" class="text-white">Contact US</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -28,12 +40,14 @@
                 <img class="d-block w-100" src="{{ asset('frontend_assets/images/slide-03.jpg')}}" alt="Third slide">
                 <div class="carousel-caption vdg-cur d-none d-md-block">
                     <h5 class=" bounceInDown">Donate Blood & Save a Life</h5>
-                    <p class=" bounceInLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, <br>
-                        aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis <br>
-                    sed sagittis at, sagittis quis neque. Praesent.</p>
+                    <p class=" bounceInLeft">Donate Blood Because You Can Be The Next One To Need It</p>
                     <div class=" vbh">
-                        <div class="btn btn-danger  bounceInUp"> Donate Now </div>
-                        <div class="btn btn-danger  bounceInUp"> Contact US </div>
+                        <div class="btn btn-danger  bounceInUp"> 
+                           <a href="{{ route('register') }}" class="text-white"> Donate Now </a>
+                        </div>
+                        <div class="btn btn-danger  bounceInUp">
+                            <a href="#contact" class="text-white">Contact US</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -53,15 +67,24 @@
     <div class="container">
         <div class="row session-title">
             <h2>About Us</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+            <p>We work towards strengthening a technology-linked platform aimed at building network of blood donors. Till date, through this initiative thousands of people joined and many lives have received a fresh gush of blood and lives </p>
         </div>
         <div class="row">
             <div class="col-md-6 text">
-                <h2>About Blood Doners</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some formhumour, or randomised words which don't look even slightly believable. If you are going to use a passage. industry's standard dummy has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                <p>Industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <h2>Goals and Objectives:</h2>
+                <p>
+                    To play a role in ensuring the healthy life of dying and sick people by helping to meet the need for blood in medical services through safe blood collection and supply.
+                </p>
+                <h2>Nature:</h2>
+                <p>
+                    The website is a completely non-profit, non-political and charitable organization whose entire activities are dedicated to public welfare.
+                </p>
+                <h2>Programs:</h2>
+                <p>
+                    1. Collect and supply safe blood. <br>
+                    2. Conducting leaflets and various publicity campaigns to raise public awareness about the need for voluntary blood donation.<br>
+                    3. To organize free blood grouping among the common people including various educational institutions, banks, business establishments etc. and to organize various programs for voluntary blood donation.
+                </p>
             </div>
             <div class="col-md-6 image">
                 <img src="{{ asset('frontend_assets/images/about.jpg')}}" alt="">

@@ -369,8 +369,10 @@ header {
     padding: 50px 10px; } }
 /* ===================================== About US CSS ================================== */
 .about-us {
-  padding: 50px;
-  background-color: #FFF; }
+  padding: 10px;
+  background-color: #FFF; 
+  box-shadow: 10px 10px 10px 10px #8d8282;
+  }
   @media screen and (max-width: 940px) {
     .about-us {
       padding: 30px 10px; } }

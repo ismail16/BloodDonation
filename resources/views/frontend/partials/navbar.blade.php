@@ -10,7 +10,10 @@
                             <span>|</span></li>
                             <li>
                                <i class="fa fa-search"></i>
-                                Search Blood
+                               <a href="{{ route('search_blood') }}" class="text-white">
+                                    Search Blood
+                               </a>
+                               
                             </li>
                         </ul>
                     </div>
@@ -20,7 +23,7 @@
                             @if (Route::has('login'))
                                 @auth
                                     <li>
-                                    <a href="{{ route('doner.profile') }}" class="text-white">
+                                    <a href="{{ route('doner.profile.index') }}" class="text-white">
                                         <i class="fas fa-user"></i> Profile
                                     </a>
                                     </li>
@@ -79,11 +82,11 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#about">About Us</a>
+                                    <a class="nav-link" href="{{ '/' }}#about">About Us</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#gallery">Gallery</a>
+                                    <a class="nav-link" href="{{ '/' }}#gallery">Gallery</a>
                                 </li>
 
                                 <!-- <li class="nav-item">

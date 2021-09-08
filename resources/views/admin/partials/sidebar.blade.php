@@ -20,6 +20,12 @@
                     </a>
                 </li>
                 <li class="nav-item has-treeview">
+                    <a href="{{ route('admin.message.index') }}" class="nav-link {{Request::is('admin/message*') ? 'active':''}}">
+                        <i class="nav-icon far fa-comments"></i>
+                        <p>Message</p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
                     <a href="{{route('admin.division.index')}}" class="nav-link {{Request::is('admin/division*')?'active':''}}">
                         <i class="nav-icon fa fa-puzzle-piece"></i>
                         <p>Division</p>

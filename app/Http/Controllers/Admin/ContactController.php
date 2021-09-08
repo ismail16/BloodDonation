@@ -10,22 +10,22 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $contacts = Contact::orderBy('id', 'desc')->get();
-        return view('admin.contact.index', compact('contacts'));
+        $messages = Contact::orderBy('id', 'desc')->get();
+        return view('admin.message.index', compact('messages'));
     }
 
     public function show($id)
     {
-        $contact = Contact::find($id);
-        $contact->status = 1;
-        $contact->save();
-        return view('admin.contact.show', compact('contact'));
+        $message = Contact::find($id);
+        $message->status = 1;
+        $message->save();
+        return view('admin.message.show', compact('message'));
     }
 
     public function destroy($id)
     {
-        $contact = Contact::find($id);
-        $contact->delete();
-        return redirect()->route('admin.contact.index')->with('message', 'Contact Deleted Successfully !');
+        $message = Contact::find($id);
+        $message->delete();
+        return redirect()->route('admin.message.index')->with('message', 'Message Deleted Successfully !');
     }
 }

@@ -29,7 +29,7 @@
                   <tr>
                       <th>S.N</th>
                       <th>Name</th>
-                      <th>Name Bangla</th>
+                      <!-- <th>Name Bangla</th> -->
                       <th>Status</th>
                       <th class="text-center">Action</th>
                   </tr>
@@ -39,7 +39,7 @@
                  <tr>
                    <td>{{ $loop->index+1 }}</td>
                    <td>{{$division->name}}</td>
-                   <td>{{$division->name_bn}}</td>
+                   <!-- <td>{{$division->name_bn}}</td> -->
                    <td class="text-center">
                      @if($division->status == 0)
                       <span class="badge bg-red">Deactive</span>

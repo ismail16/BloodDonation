@@ -31,7 +31,7 @@
                       <th>Division</th>
                       <th>Districr</th>
                       <th>Thana</th>
-                      <th>Thana Bangla</th>
+                      <!-- <th>Thana Bangla</th> -->
                       <th>Status</th>
                       <th class="text-center">Action</th>
                   </tr>
@@ -43,7 +43,7 @@
                    <td>{{ $thana->division->name }}</td>
                    <td>{{$thana->district->name}}</td>
                    <td>{{$thana->name}}</td>
-                   <td>{{$thana->name_bn}}</td>
+                   <!-- <td>{{$thana->name_bn}}</td> -->
                    <td class="text-center">
                      @if($thana->status == 0)
                       <span class="badge bg-red">Deactive</span>

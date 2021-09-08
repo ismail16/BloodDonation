@@ -58,18 +58,24 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/contact-post' => 
+      '/contact-us-post' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'contact_post',
+            '_route' => 'contact_us_post',
           ),
           1 => NULL,
           2 => 
           array (
-            'POST' => 0,
+            'GET' => 0,
+            'HEAD' => 1,
+            'POST' => 2,
+            'PUT' => 3,
+            'PATCH' => 4,
+            'DELETE' => 5,
+            'OPTIONS' => 6,
           ),
           3 => NULL,
           4 => false,
@@ -126,6 +132,23 @@ app('router')->setCompiledRoutes(
           1 => NULL,
           2 => 
           array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'search_blood_post',
+          ),
+          1 => NULL,
+          2 => 
+          array (
             'POST' => 0,
           ),
           3 => NULL,
@@ -157,7 +180,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::HDfX5Usop0PcEWzR',
+            '_route' => 'generated::X7MXJA48vXbsUXdP',
           ),
           1 => NULL,
           2 => 
@@ -212,7 +235,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::tLEBXoTayMqL6S9n',
+            '_route' => 'generated::RmNF4KWo7azsY1I1',
           ),
           1 => NULL,
           2 => 
@@ -303,7 +326,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::9xVqTtWj5glZI3Vb',
+            '_route' => 'generated::fMofbn7nmI1rTV4Q',
           ),
           1 => NULL,
           2 => 
@@ -580,6 +603,62 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/admin/message' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.message.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.message.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/message/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.message.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/admin/slider' => 
       array (
         0 => 
@@ -698,7 +777,43 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'doner.profile',
+            '_route' => 'doner.profile.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'doner.profile.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/doner/profile/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'doner.profile.create',
           ),
           1 => NULL,
           2 => 
@@ -715,7 +830,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/password/reset/([^/]++)(*:31)|/admin/(?|user/([^/]++)(?|(*:64)|/edit(*:76)|(*:83))|di(?|vision/([^/]++)(?|(*:114)|/edit(*:127)|(*:135))|strict/([^/]++)(?|(*:162)|/edit(*:175)|(*:183)))|thana/([^/]++)(?|(*:210)|/edit(*:223)|(*:231))|s(?|lider/([^/]++)(?|(*:261)|/edit(*:274)|(*:282))|taff/([^/]++)(?|(*:307)|/edit(*:320)|(*:328)))))/?$}sDu',
+      0 => '{^(?|/password/reset/([^/]++)(*:31)|/admin/(?|user/([^/]++)(?|(*:64)|/edit(*:76)|(*:83))|di(?|vision/([^/]++)(?|(*:114)|/edit(*:127)|(*:135))|strict/([^/]++)(?|(*:162)|/edit(*:175)|(*:183)))|thana/([^/]++)(?|(*:210)|/edit(*:223)|(*:231))|message/([^/]++)(?|(*:259)|/edit(*:272)|(*:280))|s(?|lider/([^/]++)(?|(*:310)|/edit(*:323)|(*:331))|taff/([^/]++)(?|(*:356)|/edit(*:369)|(*:377))))|/doner/profile/([^/]++)(?|(*:414)|/edit(*:427)|(*:435)))/?$}sDu',
     ),
     3 => 
     array (
@@ -1094,7 +1209,95 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      261 => 
+      259 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.message.show',
+          ),
+          1 => 
+          array (
+            0 => 'message',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      272 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.message.edit',
+          ),
+          1 => 
+          array (
+            0 => 'message',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      280 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.message.update',
+          ),
+          1 => 
+          array (
+            0 => 'message',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.message.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'message',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      310 => 
       array (
         0 => 
         array (
@@ -1117,7 +1320,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      274 => 
+      323 => 
       array (
         0 => 
         array (
@@ -1140,7 +1343,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      282 => 
+      331 => 
       array (
         0 => 
         array (
@@ -1182,7 +1385,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      307 => 
+      356 => 
       array (
         0 => 
         array (
@@ -1205,7 +1408,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      320 => 
+      369 => 
       array (
         0 => 
         array (
@@ -1228,7 +1431,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      328 => 
+      377 => 
       array (
         0 => 
         array (
@@ -1259,6 +1462,94 @@ app('router')->setCompiledRoutes(
           1 => 
           array (
             0 => 'staff',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      414 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'doner.profile.show',
+          ),
+          1 => 
+          array (
+            0 => 'profile',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      427 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'doner.profile.edit',
+          ),
+          1 => 
+          array (
+            0 => 'profile',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      435 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'doner.profile.update',
+          ),
+          1 => 
+          array (
+            0 => 'profile',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'doner.profile.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'profile',
           ),
           2 => 
           array (
@@ -1357,27 +1648,33 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'contact_post' => 
+    'contact_us_post' => 
     array (
       'methods' => 
       array (
-        0 => 'POST',
+        0 => 'GET',
+        1 => 'HEAD',
+        2 => 'POST',
+        3 => 'PUT',
+        4 => 'PATCH',
+        5 => 'DELETE',
+        6 => 'OPTIONS',
       ),
-      'uri' => 'contact-post',
+      'uri' => 'contact-us-post',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'uses' => 'App\\Http\\Controllers\\Frontend\\PagesController@contact_post',
-        'controller' => 'App\\Http\\Controllers\\Frontend\\PagesController@contact_post',
+        'uses' => 'App\\Http\\Controllers\\Frontend\\PagesController@contact_us_post',
+        'controller' => 'App\\Http\\Controllers\\Frontend\\PagesController@contact_us_post',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => NULL,
         'where' => 
         array (
         ),
-        'as' => 'contact_post',
+        'as' => 'contact_us_post',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1466,7 +1763,8 @@ app('router')->setCompiledRoutes(
     array (
       'methods' => 
       array (
-        0 => 'POST',
+        0 => 'GET',
+        1 => 'HEAD',
       ),
       'uri' => 'search-blood',
       'action' => 
@@ -1483,6 +1781,41 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'search_blood',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'search_blood_post' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'search-blood',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Frontend\\PagesController@search_blood_post',
+        'controller' => 'App\\Http\\Controllers\\Frontend\\PagesController@search_blood_post',
+        'namespace' => 'App\\Http\\Controllers',
+        'prefix' => NULL,
+        'where' => 
+        array (
+        ),
+        'as' => 'search_blood_post',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1533,7 +1866,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::HDfX5Usop0PcEWzR' => 
+    'generated::X7MXJA48vXbsUXdP' => 
     array (
       'methods' => 
       array (
@@ -1553,7 +1886,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::HDfX5Usop0PcEWzR',
+        'as' => 'generated::X7MXJA48vXbsUXdP',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1639,7 +1972,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::tLEBXoTayMqL6S9n' => 
+    'generated::RmNF4KWo7azsY1I1' => 
     array (
       'methods' => 
       array (
@@ -1659,7 +1992,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::tLEBXoTayMqL6S9n',
+        'as' => 'generated::RmNF4KWo7azsY1I1',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1852,7 +2185,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::9xVqTtWj5glZI3Vb' => 
+    'generated::fMofbn7nmI1rTV4Q' => 
     array (
       'methods' => 
       array (
@@ -1872,7 +2205,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::9xVqTtWj5glZI3Vb',
+        'as' => 'generated::fMofbn7nmI1rTV4Q',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3019,6 +3352,270 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
+    'admin.message.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/message',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'admin',
+        ),
+        'as' => 'admin.message.index',
+        'uses' => 'App\\Http\\Controllers\\Admin\\ContactController@index',
+        'controller' => 'App\\Http\\Controllers\\Admin\\ContactController@index',
+        'namespace' => 'App\\Http\\Controllers\\Admin',
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'admin.message.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/message/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'admin',
+        ),
+        'as' => 'admin.message.create',
+        'uses' => 'App\\Http\\Controllers\\Admin\\ContactController@create',
+        'controller' => 'App\\Http\\Controllers\\Admin\\ContactController@create',
+        'namespace' => 'App\\Http\\Controllers\\Admin',
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'admin.message.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'admin/message',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'admin',
+        ),
+        'as' => 'admin.message.store',
+        'uses' => 'App\\Http\\Controllers\\Admin\\ContactController@store',
+        'controller' => 'App\\Http\\Controllers\\Admin\\ContactController@store',
+        'namespace' => 'App\\Http\\Controllers\\Admin',
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'admin.message.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/message/{message}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'admin',
+        ),
+        'as' => 'admin.message.show',
+        'uses' => 'App\\Http\\Controllers\\Admin\\ContactController@show',
+        'controller' => 'App\\Http\\Controllers\\Admin\\ContactController@show',
+        'namespace' => 'App\\Http\\Controllers\\Admin',
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'admin.message.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/message/{message}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'admin',
+        ),
+        'as' => 'admin.message.edit',
+        'uses' => 'App\\Http\\Controllers\\Admin\\ContactController@edit',
+        'controller' => 'App\\Http\\Controllers\\Admin\\ContactController@edit',
+        'namespace' => 'App\\Http\\Controllers\\Admin',
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'admin.message.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'admin/message/{message}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'admin',
+        ),
+        'as' => 'admin.message.update',
+        'uses' => 'App\\Http\\Controllers\\Admin\\ContactController@update',
+        'controller' => 'App\\Http\\Controllers\\Admin\\ContactController@update',
+        'namespace' => 'App\\Http\\Controllers\\Admin',
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'admin.message.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'admin/message/{message}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'admin',
+        ),
+        'as' => 'admin.message.destroy',
+        'uses' => 'App\\Http\\Controllers\\Admin\\ContactController@destroy',
+        'controller' => 'App\\Http\\Controllers\\Admin\\ContactController@destroy',
+        'namespace' => 'App\\Http\\Controllers\\Admin',
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
     'admin.slider.index' => 
     array (
       'methods' => 
@@ -3547,7 +4144,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'doner.profile' => 
+    'doner.profile.index' => 
     array (
       'methods' => 
       array (
@@ -3563,9 +4160,235 @@ app('router')->setCompiledRoutes(
           1 => 'auth',
           2 => 'doner',
         ),
+        'as' => 'doner.profile.index',
         'uses' => 'App\\Http\\Controllers\\Doner\\ProfileController@index',
         'controller' => 'App\\Http\\Controllers\\Doner\\ProfileController@index',
-        'as' => 'doner.profile',
+        'namespace' => 'App\\Http\\Controllers\\Doner',
+        'prefix' => '/doner',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'doner.profile.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'doner/profile/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'doner',
+        ),
+        'as' => 'doner.profile.create',
+        'uses' => 'App\\Http\\Controllers\\Doner\\ProfileController@create',
+        'controller' => 'App\\Http\\Controllers\\Doner\\ProfileController@create',
+        'namespace' => 'App\\Http\\Controllers\\Doner',
+        'prefix' => '/doner',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'doner.profile.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'doner/profile',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'doner',
+        ),
+        'as' => 'doner.profile.store',
+        'uses' => 'App\\Http\\Controllers\\Doner\\ProfileController@store',
+        'controller' => 'App\\Http\\Controllers\\Doner\\ProfileController@store',
+        'namespace' => 'App\\Http\\Controllers\\Doner',
+        'prefix' => '/doner',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'doner.profile.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'doner/profile/{profile}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'doner',
+        ),
+        'as' => 'doner.profile.show',
+        'uses' => 'App\\Http\\Controllers\\Doner\\ProfileController@show',
+        'controller' => 'App\\Http\\Controllers\\Doner\\ProfileController@show',
+        'namespace' => 'App\\Http\\Controllers\\Doner',
+        'prefix' => '/doner',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'doner.profile.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'doner/profile/{profile}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'doner',
+        ),
+        'as' => 'doner.profile.edit',
+        'uses' => 'App\\Http\\Controllers\\Doner\\ProfileController@edit',
+        'controller' => 'App\\Http\\Controllers\\Doner\\ProfileController@edit',
+        'namespace' => 'App\\Http\\Controllers\\Doner',
+        'prefix' => '/doner',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'doner.profile.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'doner/profile/{profile}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'doner',
+        ),
+        'as' => 'doner.profile.update',
+        'uses' => 'App\\Http\\Controllers\\Doner\\ProfileController@update',
+        'controller' => 'App\\Http\\Controllers\\Doner\\ProfileController@update',
+        'namespace' => 'App\\Http\\Controllers\\Doner',
+        'prefix' => '/doner',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'doner.profile.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'doner/profile/{profile}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'doner',
+        ),
+        'as' => 'doner.profile.destroy',
+        'uses' => 'App\\Http\\Controllers\\Doner\\ProfileController@destroy',
+        'controller' => 'App\\Http\\Controllers\\Doner\\ProfileController@destroy',
         'namespace' => 'App\\Http\\Controllers\\Doner',
         'prefix' => '/doner',
         'where' => 

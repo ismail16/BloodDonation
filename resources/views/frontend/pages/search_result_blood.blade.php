@@ -6,22 +6,23 @@
 
 
 <section id="about" class="contianer-fluid about-us">
-    <div class="container">
+    <div class="container mb-5">
         <div class="row">
             <div class="col-md-12">
                 <h2>Blood Doners</h2>
             </div>
         </div>
         <div class="row">
+            @if(count($search_results)>0)
             @foreach($search_results as $user)
-            <div class="col-md-4 border">
+            <div class="col-md-4">
                 @if($user->donate_date)
                 <div class="text-center">
                     <span class="text-danger">Last Donate : </span> 
                     <span>{{ $user->donate_date }}</span>
                 </div>
                 @endif
-                <div class="row p-1">
+                <div class="row border m-1 p-2">
                     <div class="col-md-8 pl-2">
                         <div class="">
                             <p>Name-<a href="" class="as3_name">{{ $user->name }}</a>
@@ -51,7 +52,24 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-12  d-flex justify-content-center">
+                {{ $search_results->links() }}
+            </div>
             @endforeach
+            @else
+            <div class="col-md-12">
+                <div class="border text-center p-5">
+                   <h1>Opps !!</h1>
+                   <h3 class="text-danger"> Doners not Found</h3><br>
+                    <div class="abstract-div">
+                        <div class="">
+                            Go to <a href="/">Home</a>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            @endif
         </div>
     </div>
 </section>

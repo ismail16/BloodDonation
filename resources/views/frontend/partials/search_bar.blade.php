@@ -4,7 +4,7 @@
     <?php 
         $divisions =  \App\Models\Division::orderBy('id', 'desc')->get();
     ?>
-    <form class="" action="{{ route('search_blood') }}" method="post" enctype="multipart/form-data">
+    <form class="" action="{{ route('search_blood_post') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="row d-flex justify-content-center mt-1 mb-1 p-2">
             <div class="col-sm-6 col-md-4 col-lg-2 search_option">
@@ -23,10 +23,10 @@
             <div class="col-sm-6 col-md-2 col-lg-2 search_option">
                 <h6 class="mb-1 form-label">Division</h6>
                 <select class="form-control-sm w-100" name="division_id" id="division_selector" onchange="divisionChange(this);">
-                    <option>
+                    <option value="">
                         Select Division
                     </option>
-                   @foreach($divisions as $division)
+                    @foreach($divisions as $division)
                     <option value="{{ $division->id }}">
                         {{ $division->name }}
                     </option>

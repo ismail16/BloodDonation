@@ -15,7 +15,7 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
-    protected $redirectTo = '/author/dashboard';
+    protected $redirectTo = '/doner/profile';
 
    
     public function __construct()

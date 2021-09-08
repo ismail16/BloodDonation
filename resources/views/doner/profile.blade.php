@@ -16,7 +16,7 @@
                 <div class="card-header">
                     <a href="/" class="btn btn-sm btn-primary">Home</a>
                     <div class="float-right">
-                        <a href="#" class="btn btn-sm btn-primary">
+                        <a href="{{ route('doner.profile.edit', $user->id) }}" class="btn btn-sm btn-primary">
                             <i class="fa fa-edit"></i> Edit
                         </a>
                     </div>
@@ -131,7 +131,7 @@
                                             @if($user->photo)
                                             <img src="{{ asset('images/profile_image/'.$user->photo) }}" class="img-fluid table_image border" alt="">
                                             @else
-                                            <img src="{{ asset('images/profile_image/default.jpg') }}" class="img-fluid table_image border" alt="">
+                                            <img src="{{ asset('images/profile_image/default.png') }}" class="img-fluid table_image border" alt="dd">
                                             @endif
                                         </label>
                                     </div>

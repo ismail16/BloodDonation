@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration
             $table->string('phone')->unique();
             $table->string('email')->unique();
             $table->string('gender');
-            $table->string('photo')->default('default.png');
+            $table->string('photo')->nullable();
             $table->string('blood_group');
             $table->string('date_of_birth');
             $table->string('division_id');
