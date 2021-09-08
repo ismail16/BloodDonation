@@ -16,12 +16,6 @@
             @if(count($search_results)>0)
             @foreach($search_results as $user)
             <div class="col-md-4">
-                @if($user->donate_date)
-                <div class="text-center">
-                    <span class="text-danger">Last Donate : </span> 
-                    <span>{{ $user->donate_date }}</span>
-                </div>
-                @endif
                 <div class="row border m-1 p-2">
                     <div class="col-md-8 pl-2">
                         <div class="">
@@ -41,6 +35,12 @@
                             <img src="{{ asset('images/profile_image/'. $user->photo) }}" alt="Image" class="img-fluid image-size">
                         @else
                             <img src="{{ asset('images/profile_image/default.png') }}" class="img-fluid image-size">
+                        @endif
+                        @if($user->donate_date)
+                        <div class="text-center border mt-1">
+                            <span class="text-danger">Last Donate</span> <br>
+                            <span>12-12-2021</span>
+                        </div>
                         @endif
                     </div>
                     <div class="col-md-12 mt-2 pt-2 mb-2 border-top">
