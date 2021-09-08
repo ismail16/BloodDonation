@@ -39,7 +39,7 @@
                         @if($user->donate_date)
                         <div class="text-center border mt-1">
                             <span class="text-danger">Last Donate</span> <br>
-                            <span>12-12-2021</span>
+                            <span>{{ date('d-m-Y', strtotime($user->donate_date)) }}</span>
                         </div>
                         @endif
                     </div>
