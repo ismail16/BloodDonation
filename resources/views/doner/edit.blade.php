@@ -20,7 +20,7 @@
                         <?php 
                         $divisions = \App\Models\Division::orderBy('id', 'desc')->get();
                         $district = \App\Models\District::where('id', $user->district_id)->first();
-                        $thana = \App\Models\Thana::where('id', $user->district_id)->first();
+                        $thana = \App\Models\Thana::where('id', $user->thana_id)->first();
                         ?>
                         <div class="row">
                             <div class="col-lg-12">
