@@ -15,7 +15,7 @@
         <div class="row">
             @if(count($search_results)>0)
             @foreach($search_results as $user)
-            <div class="col-md-4">
+            <div class="col-md-4 pl-1 pr-1">
                 <div class="row border m-1 p-2">
                     <div class="col-md-8 pl-2">
                         <div class="">
@@ -43,7 +43,7 @@
                         </div>
                         @endif
                     </div>
-                    <div class="col-md-12 mt-2 pt-2 mb-2 border-top">
+                    <div class="col-md-12 mt-2 pt-2 mb-2 pl-0 pr-0 border-top">
                         <span class="text-danger">Mobile : </span> 
                         <span>{{ $user->phone }}</span> <br>
 
