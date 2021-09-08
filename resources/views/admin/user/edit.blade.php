@@ -24,7 +24,7 @@
                     <?php 
                         $divisions =  \App\Models\Division::orderBy('id', 'desc')->get();
                         $district =  \App\Models\District::where('id', $user->district_id)->first();
-                        $thana =  \App\Models\Thana::where('id', $user->district_id)->first();
+                        $thana =  \App\Models\Thana::where('id', $user->thana_id)->first();
                     ?>
                     <div class="card-body pb-0">
                         <div class="row">
@@ -49,23 +49,23 @@
                                     <div class="col-md-3">
                                         <label class="mb-0">Blood Group<span class="text-danger">*</span> </label>
                                         <select class="form-control mb-2 " name="blood_group">
-                                            <option value="A+"{{ $user->blood_group == 0 ? 'selected':'' }}>A+</option>
-                                            <option value="A-"{{ $user->blood_group == 0 ? 'selected':'' }}>A-</option>
-                                            <option value="B+"{{ $user->blood_group == 0 ? 'selected':'' }}>B+</option>
-                                            <option value="B-"{{ $user->blood_group == 0 ? 'selected':'' }}>B-</option>
-                                            <option value="AB+"{{ $user->blood_group == 0 ? 'selected':'' }}>AB+</option>
-                                            <option value="AB-"{{ $user->blood_group == 0 ? 'selected':'' }}>AB-</option>
-                                            <option value="O+"{{ $user->blood_group == 0 ? 'selected':'' }}>O+</option>
-                                            <option value="O-"{{ $user->blood_group == 0 ? 'selected':'' }}>O-</option>
+                                            <option value="A+"{{ $user->blood_group == 'A+' ? 'selected':'' }}>A+</option>
+                                            <option value="A-"{{ $user->blood_group == 'A-' ? 'selected':'' }}>A-</option>
+                                            <option value="B+"{{ $user->blood_group == 'B+' ? 'selected':'' }}>B+</option>
+                                            <option value="B-"{{ $user->blood_group == 'B-' ? 'selected':'' }}>B-</option>
+                                            <option value="AB+"{{ $user->blood_group == 'AB+' ? 'selected':'' }}>AB+</option>
+                                            <option value="AB-"{{ $user->blood_group == 'AB-' ? 'selected':'' }}>AB-</option>
+                                            <option value="O+"{{ $user->blood_group == 'O+' ? 'selected':'' }}>O+</option>
+                                            <option value="O-"{{ $user->blood_group == 'O-' ? 'selected':'' }}>O-</option>
                                         </select>
                                     </div>
 
                                     <div class="col-md-3">
                                         <label class="mb-0">Gender<span class="text-danger">*</span> </label>
                                         <select class="form-control mb-2 " name="gender">
-                                            <option value="Male" {{ $user->gender == 0 ? 'selected':'' }}>Male</option>
-                                            <option value="Female" {{ $user->gender == 0 ? 'selected':'' }}>Female</option>
-                                            <option value="Other" {{ $user->gender == 0 ? 'selected':'' }}>Other</option>
+                                            <option value="Male" {{ $user->gender == 'Male' ? 'selected':'' }}>Male</option>
+                                            <option value="Female" {{ $user->gender == 'Female' ? 'selected':'' }}>Female</option>
+                                            <option value="Other" {{ $user->gender == 'Other' ? 'selected':'' }}>Other</option>
                                         </select>
                                     </div>
 

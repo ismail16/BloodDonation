@@ -38,7 +38,7 @@
                                     <li>
                                         <i class="fa fa-tint"></i>
                                         <a href="{{ route('register') }}" class="text-white">
-                                            Donate Blood
+                                            Register
                                         </a>
                                         <span>|</span>
                                     </li>
