@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title','All Team Members')
+@section('title','All Doners')
 
 @push('css')
    

@@ -52,9 +52,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12  d-flex justify-content-center">
-                {{ $search_results->links() }}
-            </div>
             @endforeach
             @else
             <div class="col-md-12">
@@ -68,6 +65,11 @@
                         <br>
                     </div>
                 </div>
+            </div>
+            @endif
+            @if($search_results->links())
+            <div class="col-md-12  d-flex justify-content-center">
+                {{ $search_results->links() }}
             </div>
             @endif
         </div>

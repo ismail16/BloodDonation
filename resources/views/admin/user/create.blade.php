@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title','Create New User')
+@section('title','Create New Doner')
 
 @section('content')
 <section class="content">
