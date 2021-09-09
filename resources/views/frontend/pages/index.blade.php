@@ -102,34 +102,34 @@
             <div id="gg-screen"></div>
             <div class="gg-box">
                 <div class="gg-element">
-                    <img src="{{ asset('frontend_assets/images/g1.jpg')}}">
+                    <img src="{{ asset('frontend_assets/images/g1.jpg')}}" alt="Gallery">
                 </div>
                 <div class="gg-element">
-                    <img src="{{ asset('frontend_assets/images/g2.jpg')}}">
+                    <img src="{{ asset('frontend_assets/images/g2.jpg')}}" alt="Gallery">
                 </div>
                 <div class="gg-element">
-                    <img src="{{ asset('frontend_assets/images/g3.jpg')}}">
+                    <img src="{{ asset('frontend_assets/images/g3.jpg')}}" alt="Gallery">
                 </div>
                 <div class="gg-element">
-                    <img src="{{ asset('frontend_assets/images/g4.jpg')}}">
+                    <img src="{{ asset('frontend_assets/images/g4.jpg')}}" alt="Gallery">
                 </div>
                 <div class="gg-element">
-                    <img src="{{ asset('frontend_assets/images/g5.jpg')}}">
+                    <img src="{{ asset('frontend_assets/images/g5.jpg')}}" alt="Gallery">
                 </div>
                 <div class="gg-element">
-                    <img src="{{ asset('frontend_assets/images/g6.jpg')}}">
+                    <img src="{{ asset('frontend_assets/images/g6.jpg')}}" alt="Gallery">
                 </div>
                 <div class="gg-element">
-                    <img src="{{ asset('frontend_assets/images/g7.jpg')}}">
+                    <img src="{{ asset('frontend_assets/images/g7.jpg')}}" alt="Gallery">
                 </div>
                 <div class="gg-element">
-                    <img src="{{ asset('frontend_assets/images/g8.jpg')}}">
+                    <img src="{{ asset('frontend_assets/images/g8.jpg')}}" alt="Gallery">
                 </div>
                 <div class="gg-element">
-                    <img src="{{ asset('frontend_assets/images/g9.jpg')}}">
+                    <img src="{{ asset('frontend_assets/images/g9.jpg')}}" alt="Gallery">
                 </div>
                 <div class="gg-element">
-                    <img src="{{ asset('frontend_assets/images/g10.jpg')}}">
+                    <img src="{{ asset('frontend_assets/images/g10.jpg')}}" alt="Gallery">
                 </div>
 
 
