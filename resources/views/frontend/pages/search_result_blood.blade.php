@@ -19,15 +19,15 @@
                 <div class="row border m-1 p-2">
                     <div class="col-8 pl-2">
                         <div class="">
-                            <p>Name-<a href="" class="as3_name">{{ $user->name }}</a>
-                            <p>Age- <span>{{ date_diff(date_create($user->date_of_birth), date_create('now'))->y }} yrs</span></p>
-                            <p>Gender- <span>{{ $user->gender }}</span></p>
-                            <p>Blood Group- 
+                            <p class="res_font_size">Name-<a href="" class="as3_name">{{ $user->name }}</a>
+                            <p class="res_font_size">Age- <span>{{ date_diff(date_create($user->date_of_birth), date_create('now'))->y }} yrs</span></p>
+                            <p class="res_font_size">Gender- <span>{{ $user->gender }}</span></p>
+                            <p class="res_font_size">Blood Group- 
                                 <span class="text-danger border p-1 rounded-circle">{{ $user->blood_group }}</span>
                             </p>
-                            <p>Division-{{ $user->division->name }}</p>
-                            <p>District-{{ $user->district->name }}</p>
-                            <p>Thana-{{ $user->thana->name }}</p>
+                            <p class="res_font_size">Division-{{ $user->division->name }}</p>
+                            <p class="res_font_size">District-{{ $user->district->name }}</p>
+                            <p class="res_font_size">Thana-{{ $user->thana->name }}</p>
                         </div>
                     </div>
                     <div class="col-4 pr-0 ">
@@ -38,17 +38,17 @@
                         @endif
                         @if($user->donate_date)
                         <div class="text-center border mt-1">
-                            <span class="text-danger">Last Donate</span> <br>
-                            <span>{{ date('d-m-Y', strtotime($user->donate_date)) }}</span>
+                            <span class="text-danger res_font_size">Last Donate</span> <br>
+                            <span class="res_font_size">{{ date('d-m-Y', strtotime($user->donate_date)) }}</span>
                         </div>
                         @endif
                     </div>
                     <div class="col-md-12 mt-2 pt-2 mb-2 pl-0 pr-0 border-top">
-                        <span class="text-danger">Mobile : </span> 
-                        <span>{{ $user->phone }}</span> <br>
+                        <span class="text-danger res_font_size">Mobile : </span> 
+                        <span class="res_font_size text-dark">{{ $user->phone }}</span> <br>
 
-                        <span class="text-danger">E-mail : </span> 
-                        <span>{{ $user->email }}</span> <br>
+                        <span class="text-danger res_font_size">E-mail : </span> 
+                        <span class="res_font_size text-dark">{{ $user->email }}</span> <br>
                     </div>
                 </div>
             </div>

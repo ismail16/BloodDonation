@@ -141,9 +141,19 @@ body {
   .page-nav ul {
     float: none;
     margin: auto; }
-  @media screen and (max-width: 576px) {
+
+@media only screen and (max-width: 600px) {
+  .res_font_size{
+      font-size: 13px;
+    }
+}
+  
+@media screen and (max-width: 576px) {
     .page-nav {
-      padding-top: 186px; } }
+      padding-top: 186px;
+    }
+    
+}
   @media screen and (max-width: 356px) {
     .page-nav {
       padding-top: 206px; } }
