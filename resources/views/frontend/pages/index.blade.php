@@ -100,7 +100,7 @@
         </div>
         <div class="gallery-row row">
             <div id="gg-screen"></div>
-            <div class="gg-box">
+            <div class="gg-box w-100">
                 <div class="gg-element">
                     <img src="{{ asset('frontend_assets/images/g1.jpg')}}" alt="Gallery">
                 </div>
