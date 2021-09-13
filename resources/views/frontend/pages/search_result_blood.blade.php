@@ -34,7 +34,7 @@
                         @if($user->photo)
                             <img src="{{ asset('images/profile_image/'. $user->photo) }}" alt="Image" class="img-fluid image-size">
                         @else
-                            <img src="{{ asset('images/profile_image/default.png') }}" class="img-fluid image-size">
+                            <img src="{{ asset('images/profile_default.png') }}" class="img-fluid image-size">
                         @endif
                         @if($user->donate_date)
                         <div class="text-center border mt-1">

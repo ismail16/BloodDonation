@@ -71,8 +71,8 @@ class ProfileController extends Controller
 
         // return $user;
 
-            $user->save();
-            return redirect()->route('doner.profile.edit', $user->id)->with('message', 'Information Updated Successfully !');
+        $user->save();
+        return redirect()->route('doner.profile.edit', $user->id)->with('message', 'Information Updated Successfully !');
         // try{
         // }catch (\Exception $exception){
         //     return back()->with('message', $exception);
