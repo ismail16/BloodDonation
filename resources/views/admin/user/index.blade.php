@@ -43,7 +43,11 @@
                                 <tr>
                                     <td>{{ $loop->index+1 }}</td>
                                     <td>
-                                        <img src="{{ asset('images/profile_image/'.$user->photo) }}" class="img-fluid table_image" alt="">
+                                        @if($user->photo)
+                                        <img src="{{ asset('images/profile_image/'.$user->photo) }}" class="img-fluid table_image border" alt="">
+                                        @else
+                                        <img src="{{ asset('images/profile_default.png') }}" class="img-fluid table_image" alt="">
+                                        @endif
                                     </td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->phone }}</td>

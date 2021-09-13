@@ -131,7 +131,7 @@
                                             @if($user->photo)
                                             <img src="{{ asset('images/profile_image/'.$user->photo) }}" class="img-fluid table_image border" alt="">
                                             @else
-                                            <img src="{{ asset('images/profile_image/default.png') }}" class="img-fluid table_image border" alt="dd">
+                                            <img src="{{ asset('images/profile_default.png') }}" class="img-fluid table_image border" alt="dd">
                                             @endif
                                         </label>
                                     </div>
