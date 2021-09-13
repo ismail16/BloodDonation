@@ -19,14 +19,22 @@
                     </div>
                     <div class="col-lg-6 col-md-12 d-flex justify-content-center">
                         <ul class="ulright">
-
+                            <li class="d-lg-none">
+                            <i class="fa fa-search"></i>
+                               <a href="{{ route('search_blood') }}" class="text-white">
+                                    Search Blood
+                               </a>
+                               <span>|</span>
+                            <li>
                             @if (Route::has('login'))
                                 @auth
                                     <li>
                                     <a href="{{ route('doner.profile.index') }}" class="text-white">
                                         <i class="fas fa-user"></i> Profile
                                     </a>
+                                    <span>|</span>
                                     </li>
+
                                     <li><a href="{{ route('logout') }}" class="text-white"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         <i class="fas fa-key" title="Logout"></i> Logout
                                     </a>
@@ -48,6 +56,7 @@
                                     </li>
                                 @endauth
                             @endif
+
                         </ul>
                     </div>
                 </div>
