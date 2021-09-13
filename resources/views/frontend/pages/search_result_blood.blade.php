@@ -17,7 +17,7 @@
             @foreach($search_results as $user)
             <div class="col-md-4 pl-1 pr-1">
                 <div class="row border m-1 p-2">
-                    <div class="col-md-8 pl-2">
+                    <div class="col-8 pl-2">
                         <div class="">
                             <p>Name-<a href="" class="as3_name">{{ $user->name }}</a>
                             <p>Age- <span>{{ date_diff(date_create($user->date_of_birth), date_create('now'))->y }} yrs</span></p>
@@ -30,7 +30,7 @@
                             <p>Thana-{{ $user->thana->name }}</p>
                         </div>
                     </div>
-                    <div class="col-md-4 pr-0 ">
+                    <div class="col-4 pr-0 ">
                         @if($user->photo)
                             <img src="{{ asset('images/profile_image/'. $user->photo) }}" alt="Image" class="img-fluid image-size">
                         @else
