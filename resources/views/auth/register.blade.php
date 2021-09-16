@@ -25,27 +25,46 @@
                 </div>
             </div>
             @endif
+            @if ($errors->any())
+            <div class="">
+                <div class="">
+                    <ul class="">
+                        @foreach ($errors->all() as $error)
+                            <li class="alert p-0 alert-danger p-1 m-1">
+                                {{ $error }}
+                                <button type="button" class="close ml-4 text-danger" data-dismiss="alert">&times;</button>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+            @endif
             <div class="col-lg-12 card-header">
                 <h4 class="m-0">Be A Proud Donor</h4>
             </div>
             <div class="col-lg-12 card-body" style="background-color: #4a950547;">
                 <div class="row form">                    
                     <div class="col-md-6">
-                        <input type="text" name="name" value="" placeholder="Full Name*" class="form-control mb-2 ">
+                        <label class="mb-0">Full Name<span class="text-danger">*</span></label>
+                        <input type="text" name="name" placeholder="Full Name" class="form-control-sm w-100 border-0 mb-2" required>
                     </div>
                     <div class="col-md-6">
-                        <input type="date" name="date_of_birth" class="form-control mb-2 ">
+                        <label class="mb-0">Date of Birth<span class="text-danger">*</span></label>
+                        <input type="date" name="date_of_birth" class="form-control-sm w-100 border-0 mb-2" required>
                     </div>
                     <div class="col-lg-6 col-sm-6">
-                        <input type="text" name="phone" value="" placeholder="Phone*" class="form-control mb-2 ">
+                        <label class="mb-0">Mobile Number<span class="text-danger">*</span></label>
+                        <input type="number" name="phone" placeholder="Mobile Number" class="form-control-sm w-100 border-0 mb-2" required>
                     </div>
                     <div class="col-lg-6 col-sm-6">
-                        <input type="text" name="email" value="" placeholder="Email*" class="form-control mb-2 ">
+                        <label class="mb-0">Email<span class="text-danger">*</span></label>
+                        <input type="text" name="email" placeholder="Email" class="form-control-sm w-100 border-0 mb-2" required>
                     </div>
       
                     <div class="col-lg-6">
-                        <select class="form-control mb-2 " name="blood_group">
-                            <option value="">Blood Group*</option>
+                        <label class="mb-0">Blood Group<span class="text-danger">*</span></label>
+                        <select class="form-control-sm w-100 border-0 mb-2" name="blood_group" required>
+                            <option value="">Blood Group</option>
                             <option value="A+">A+</option>
                             <option value="A-">A-</option>
                             <option value="B+">B+</option>
@@ -58,8 +77,9 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <select class="form-control mb-2 " name="gender">
-                            <option value="">Gender*</option>
+                        <label class="mb-0">Gender<span class="text-danger">*</span></label>
+                        <select class="form-control-sm w-100 border-0 mb-2 " name="gender" required>
+                            <option value="">Gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                             <option value="Other">Other</option>
@@ -67,9 +87,9 @@
                     </div>
 
                     <div class="col-md-6">
-                        <!-- <label class="mb-0">Division<span class="text-danger">*</span> </label> -->
-                        <select class="form-control" name="division_id" id="division_selector" onchange="divisionChange(this);">
-                            <option>Select Division</option>
+                        <label class="mb-0">Division<span class="text-danger">*</span> </label>
+                        <select class="form-control-sm w-100 border-0 mb-2" name="division_id" id="division_selector" onchange="divisionChange(this);" required>
+                            <option value="">Select Division</option>
                             @foreach($divisions as $division)
                                 <option value="{{ $division->id }}">
                                     {{ $division->name }}
@@ -78,19 +98,20 @@
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <!-- <label class="mb-0">District<span class="text-danger">*</span> </label> -->
-                        <select class="form-control" name="district_id"  onchange="districtChange(this);" id="district_id">
-                            <option>Select District</option>
+                        <label class="mb-0">District<span class="text-danger">*</span> </label>
+                        <select class="form-control-sm w-100 border-0 mb-2" name="district_id"  onchange="districtChange(this);" id="district_id" required>
+                            <option value="">Select District</option>
                         </select>
                     </div>
                     <div class="col-md-12">
-                        <!-- <label class="mb-0">Thana<span class="text-danger">*</span> </label> -->
-                        <select class="form-control" name="thana_id" id="thana_id">
-                            <option>Select Thana</option>
+                        <label class="mb-0">Thana<span class="text-danger">*</span> </label>
+                        <select class="form-control-sm w-100 border-0 mb-2 " name="thana_id" id="thana_id" required>
+                            <option value="">Select Thana</option>
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <input id="password" type="password" class="form-control mb-2 @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="password">
+                        <label class="mb-0">Password<span class="text-danger">*</span> </label>
+                        <input id="password" type="password" class="form-control-sm w-100 border-0 mb-2 @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="password" required>
                         @error('password')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -98,7 +119,8 @@
                         @enderror
                     </div>
                     <div class="col-md-6">
-                        <input id="password-confirm" type="password" class="form-control mb-2" name="password_confirmation" required autocomplete="new-password" placeholder="re-type password">
+                        <label class="mb-0">re-type password<span class="text-danger">*</span> </label>
+                        <input id="password-confirm" type="password" class="form-control-sm w-100 border-0 mb-2" name="password_confirmation" required autocomplete="new-password" placeholder="re-type password" required>
                     </div>
                 </div>
             </div>
