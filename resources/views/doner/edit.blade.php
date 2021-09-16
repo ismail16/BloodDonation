@@ -25,51 +25,52 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="row form"> 
-                                    <div class="col-md-3">
-                                        <div class="row">
-                                            <label class="col-md-12">
-                                                @if($user->photo)
-                                                <img src="{{ asset('images/profile_image/'.$user->photo) }}" class="img-fluid table_image border" alt="">
-                                                @else
-                                                <img src="{{ asset('images/profile_default.png') }}" class="img-fluid  table_image border" alt="">
-                                                @endif
-                                            </label>
-                                        </div>
-                                        <input type="file" name="photo" class="">
-                                    </div>       
-                                    <div class="col-md-1"></div> 
-                                    <div class="col-md-8">
+
+                                    <div class="col-4">
+                                    <div class="row">
+                                        <label class="col-md-12">
+                                            @if($user->photo)
+                                            <img src="{{ asset('images/profile_image/'.$user->photo) }}" class="img-fluid border" alt="">
+                                            @else
+                                            <img src="{{ asset('images/profile_default.png') }}" class="img-fluid border" alt="">
+                                            @endif
+                                            <input type="file" name="photo" class="">
+                                        </label>
+                                    </div>
+                                </div>   
+                                           
+                                    <div class="col-8">
                                         <div class="row mb-1">
-                                            <label class="mb-0 col-md-3">
+                                            <label class="mb-0 col-md-4">
                                                 Full Name 
                                             </label>
-                                            <input type="text" name="name" class="form-control form-control-sm mb-0 col-md-9" value="{{ $user->name }}">
+                                            <input type="text" name="name" class="form-control form-control-sm ml-3 mr-3 mb-0 col-md-8" value="{{ $user->name }}">
                                         </div>
 
                                         <div class="row mb-1">
-                                            <label class="mb-0 col-md-3">
+                                            <label class="mb-0 col-md-4">
                                                 Date of Birth 
                                             </label>
-                                            <input type="date" name="date_of_birth" class="form-control form-control-sm mb-0 col-md-9" value="{{ $user->date_of_birth }}">
+                                            <input type="date" name="date_of_birth" class="form-control form-control-sm ml-3 mr-3 mb-0 col-md-8" value="{{ $user->date_of_birth }}">
                                         </div>
                                         <div class="row mb-1">
-                                            <label class="mb-0 col-md-3">
+                                            <label class="mb-0 col-md-4">
                                                 Phone 
                                             </label>
-                                            <input type="text" name="phone" class="form-control form-control-sm mb-0 col-md-9" value="{{ $user->phone }}">
+                                            <input type="text" name="phone" class="form-control form-control-sm ml-3 mr-3 mb-0 col-md-8" value="{{ $user->phone }}">
                                         </div>
                                         <div class="row mb-1">
-                                            <label class="mb-0 col-md-3">
+                                            <label class="mb-0 col-md-4">
                                                 Email 
                                             </label>
-                                            <input type="text" name="email" class="form-control form-control-sm mb-0 col-md-9" value="{{ $user->email }}">
+                                            <input type="text" name="email" class="form-control form-control-sm ml-3 mr-3 mb-0 col-md-8" value="{{ $user->email }}">
 
                                         </div>
                                         <div class="row mb-1">
-                                            <label class="mb-0 col-md-3">
+                                            <label class="mb-0 col-md-4">
                                                 Blood Group 
                                             </label>
-                                            <select class="form-control form-control-sm mb-0 col-md-9 " name="blood_group">
+                                            <select class="form-control form-control-sm ml-3 mr-3 mb-0 col-md-8 " name="blood_group">
                                                 <option value="A+"{{ $user->blood_group == 'A+' ? 'selected':'' }}>A+</option>
                                                 <option value="A-"{{ $user->blood_group == 'A-' ? 'selected':'' }}>A-</option>
                                                 <option value="B+"{{ $user->blood_group == 'B+' ? 'selected':'' }}>B+</option>
@@ -82,20 +83,20 @@
                                         </div>
 
                                         <div class="row mb-1">
-                                            <label class="mb-0 col-md-3">
+                                            <label class="mb-0 col-md-4">
                                                 Gender
                                             </label>
-                                            <select class="form-control form-control-sm mb-0 col-md-9" name="gender">
+                                            <select class="form-control form-control-sm ml-3 mr-3 mb-0 col-md-8" name="gender">
                                                 <option value="Male" {{ $user->gender == 'Male' ? 'selected':'' }}>Male</option>
                                                 <option value="Female" {{ $user->gender == 'Female' ? 'selected':'' }}>Female</option>
                                                 <option value="Other" {{ $user->gender == 'Other' ? 'selected':'' }}>Other</option>
                                             </select>
                                         </div>
                                         <div class="row mb-1">
-                                            <label class="mb-0 col-md-3">
+                                            <label class="mb-0 col-md-4">
                                                 Password 
                                             </label>
-                                            <input id="password" type="password" class="form-control form-control-sm mb-0 col-md-9 @error('password') is-invalid @enderror" name="password" autocomplete="new-password" placeholder="password">
+                                            <input id="password" type="password" class="form-control form-control-sm ml-3 mr-3 mb-0 col-md-8 @error('password') is-invalid @enderror" name="password" autocomplete="new-password" placeholder="password">
                                             @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -104,17 +105,17 @@
 
                                         </div>
                                         <div class="row mb-1">
-                                            <label class="mb-0 col-md-3">
+                                            <label class="mb-0 col-md-4">
                                                 re-type password 
                                             </label>
-                                            <input id="password-confirm" type="password" class="form-control form-control-sm mb-0 col-md-9" name="password_confirmation" autocomplete="new-password" placeholder="re-type password">
+                                            <input id="password-confirm" type="password" class="form-control form-control-sm ml-3 mr-3 mb-0 col-md-8" name="password_confirmation" autocomplete="new-password" placeholder="re-type password">
                                         </div>
 
                                         <div class="row mb-1">
-                                            <label class="mb-0 col-md-3">
+                                            <label class="mb-0 col-md-4">
                                                 Division
                                             </label>
-                                            <select class="form-control form-control-sm mb-0 col-md-9" name="division_id" id="division_selector" onchange="divisionChange(this);">
+                                            <select class="form-control form-control-sm ml-3 mr-3 mb-0 col-md-8" name="division_id" id="division_selector" onchange="divisionChange(this);">
                                                 @foreach($divisions as $division)
                                                 <option value="{{ $division->id }}" {{ $user->division_id == $division->id ? 'selected':'' }}>
                                                     {{ $division->name }}
@@ -123,30 +124,32 @@
                                             </select>
                                         </div>
                                         <div class="row mb-1">
-                                            <label class="mb-0 col-md-3">
+                                            <label class="mb-0 col-md-4">
                                                 District
                                             </label>
-                                            <select class="form-control form-control-sm mb-0 col-md-9" name="district_id"  onchange="districtChange(this);" id="district_id">
+                                            <select class="form-control form-control-sm ml-3 mr-3 mb-0 col-md-8" name="district_id"  onchange="districtChange(this);" id="district_id">
                                                 <option value="{{ $district->id }}">{{ $district->name }}</option>
                                             </select>
                                         </div>
                                         <div class="row mb-1">
-                                            <label class="mb-0 col-md-3">
+                                            <label class="mb-0 col-md-4">
                                                 Thana
                                             </label>
-                                            <select class="form-control form-control-sm mb-0 col-md-9" name="thana_id" id="thana_id">
+                                            <select class="form-control form-control-sm ml-3 mr-3 mb-0 col-md-8" name="thana_id" id="thana_id">
                                                 <option value="{{ $thana->id }}">{{ $thana->name }}</option>
                                             </select>
                                         </div>
 
                                         <div class="row mb-1">
-                                            <label class="mb-0 col-md-3">
+                                            <label class="mb-0 col-md-4">
                                                 Last Donate
                                             </label>
-                                            <input type="date" name="donate_date" class="form-control form-control-sm mb-0 col-md-9" value="{{ $user->donate_date }}">
+                                            <input type="date" name="donate_date" class="form-control form-control-sm ml-3 mr-3 mb-0 col-md-8" value="{{ $user->donate_date }}">
                                         </div>
                                     </div> 
+                   
 
+                                
                                 </div>
                             </div>
                         </div>

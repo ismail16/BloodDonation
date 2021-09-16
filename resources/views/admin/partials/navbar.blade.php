@@ -19,7 +19,7 @@
 	</form>
 	<ul class="navbar-nav ml-auto">
 		<li class="nav-item dropdown">
-			<a class="nav-link" href="">
+			<a class="nav-link" href="{{ route('admin.message.index') }}">
 				<i class="far fa-comments"></i>
 				<span class="badge badge-warning navbar-badge font-weight-bold ">
 				{{ \App\Models\Contact::where('status', 0)->count() }}

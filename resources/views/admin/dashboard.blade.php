@@ -19,7 +19,7 @@
 						<div class="icon">
 							<i class="fas fa-users pt-3"></i>
 						</div>
-						<a href="" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+						<a href="{{route('admin.user.index')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
 					</div>
 				</div>
 
@@ -34,7 +34,7 @@
 						<div class="icon">
 							<i class="far fa-comments pt-3"></i>
 						</div>
-						<a href="" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+						<a href="{{ route('admin.message.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
 					</div>
 				</div>
 			</div>

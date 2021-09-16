@@ -27,10 +27,10 @@
                             <div class="row form">  
                                 <div class="col-9">
                                     <div class="row mb-2">
-                                        <label class="mb-0 col-sm-5 col-md-5 col-lg-3">
+                                        <label class="mb-0 col-md-3">
                                             Full Name 
                                         </label>
-                                        <label class="mb-0 col-sm-7 col-md-7 col-lg-9 font-weight-bold text-danger">
+                                        <label class="mb-0 col-md-9 font-weight-bold text-danger">
                                             : {{ $user->name }}
                                         </label>
                                     </div>
