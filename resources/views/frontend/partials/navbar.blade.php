@@ -63,16 +63,15 @@
             </div>
         </div>
         <div id="menu-jk" class="header-bottom">
-            <div class="container">
+            <div class="container pt-0 pb-0">
                 <div class="row nav-row">
                     <div class="col-md-3 logo">
                         <a href="/">
-                            <img src="{{ asset('frontend_assets/images/logo.jpg')}}" alt="">
+                            <img src="{{ asset('frontend_assets/images/logo.jpg')}}" class="" alt="">
                         </a>
                     </div>
                     <div class="col-md-9 nav-col">
-                        <nav class="navbar navbar-expand-lg navbar-light">
-
+                        <nav class="navbar navbar-expand-lg navbar-light p-0">
                             <button
                             class="navbar-toggler"
                             type="button"
@@ -97,14 +96,52 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ '/' }}#gallery">Gallery</a>
                                 </li>
-
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" href="#process">Process</a>
-                                </li> -->
-
                                 <li class="nav-item">
                                     <a class="nav-link" href="#contact">Contact US</a>
                                 </li>
+
+                                <div class="btn-group btn-group-md d-flex pt-1 pb-2 justify-content-center" role="group" aria-label="">
+                                    <span class="btn d-lg-none">
+                                       <i class="fa fa-search"></i>
+                                       <a href="{{ route('search_blood') }}" class="">
+                                            Search Blood
+                                       </a>
+                                    </span>
+
+                                    @if (Route::has('login'))
+                                @auth
+                                    
+                                    <span class="btn ml-2 mr-2 d-lg-none">
+                                    <a href="{{ route('doner.profile.index') }}" class="">
+                                        <i class="fas fa-user"></i> Profile
+                                    </a>
+                                    </span>
+
+                                    <span class="btn d-lg-none"><a href="{{ route('logout') }}" class=""  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <i class="fas fa-key" title="Logout"></i> Logout
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                    </span>
+                                @else
+                                    <span class="btn ml-2 mr-2 d-lg-none">
+                                        <i class="fa fa-tint"></i>
+                                        <a href="{{ route('register') }}" class="">
+                                            Register
+                                        </a>
+                                    </span>
+                                    <span class="btn d-lg-none">
+                                        <i class="fas fa-user"></i>
+                                        <a href="{{ route('login') }}" class="">Login</a>
+                                    </span>
+                                @endauth
+                            @endif
+                                </div>
+
+                                
+
+                                 
                             </ul>
                         </div>
                     </nav>

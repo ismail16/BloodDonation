@@ -11,7 +11,7 @@
             </div>
         </div>
         @endif
-        <div class="col-8 mt-4 mb-5">
+        <div class="col-sm-12 col-md-12 col-lg-8 ml-2 mr-2 mt-4 mb-5">
             <form method="POST" action="{{route('doner.profile.update', $user->id)}}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
@@ -31,7 +31,7 @@
                                                 @if($user->photo)
                                                 <img src="{{ asset('images/profile_image/'.$user->photo) }}" class="img-fluid table_image border" alt="">
                                                 @else
-                                                <img src="{{ asset('images/profile_default.png') }}" class="img-fluid table_image border" alt="">
+                                                <img src="{{ asset('images/profile_default.png') }}" class="img-fluid  table_image border" alt="">
                                                 @endif
                                             </label>
                                         </div>

@@ -11,7 +11,7 @@
             </div>
         </div>
         @endif
-        <div class="col-8 mt-4 mb-5">
+        <div class="col-sm-12 col-md-12 col-lg-8 mt-4 mb-5">
             <div class="card">
                 <div class="card-header">
                     <a href="/" class="btn btn-sm btn-primary">Home</a>
@@ -25,12 +25,12 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="row form">  
-                                <div class="col-md-9">
+                                <div class="col-9">
                                     <div class="row mb-2">
-                                        <label class="mb-0 col-md-3">
+                                        <label class="mb-0 col-sm-5 col-md-5 col-lg-3">
                                             Full Name 
                                         </label>
-                                        <label class="mb-0 col-md-8 font-weight-bold text-danger">
+                                        <label class="mb-0 col-sm-7 col-md-7 col-lg-9 font-weight-bold text-danger">
                                             : {{ $user->name }}
                                         </label>
                                     </div>
@@ -125,7 +125,7 @@
                                     </div>
 
                                 </div> 
-                                <div class="col-md-3">
+                                <div class="col-3">
                                     <div class="row">
                                         <label class="col-md-12">
                                             @if($user->photo)
