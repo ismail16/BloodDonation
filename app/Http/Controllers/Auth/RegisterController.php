@@ -28,7 +28,14 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'date_of_birth' => 'required',
+            'phone' => 'required',
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'blood_group' => 'required',
+            'gender' => 'required',
+            'division_id' => 'required',
+            'district_id' => 'required',
+            'thana_id' => 'required',
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -53,5 +60,6 @@ class RegisterController extends Controller
         // $thisuser = User::find($user->id);
         // $this->sendMail($thisuser);
         return $user;
+        // return response()->json(['success'=>'Registration done successfully']);
     }
 }
