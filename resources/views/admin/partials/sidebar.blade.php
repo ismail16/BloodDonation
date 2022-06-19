@@ -16,7 +16,7 @@
                 <li class="nav-item has-treeview">
                     <a href="{{route('admin.user.index')}}" class="nav-link {{Request::is('admin/user*')?'active':''}}">
                         <i class="nav-icon fa fa-users"></i>
-                        <p>Users</p>
+                        <p>Donor</p>
                     </a>
                 </li>
                 <li class="nav-item has-treeview">

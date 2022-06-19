@@ -28,11 +28,14 @@
                                     <th>#SL</th>
                                     <th>Profile Image</th>
                                     <th>Name</th>
+                                    <th>Blood Grp</th>
                                     <th>Mobile</th>
                                     <th>Email</th>
-                                    <th>Division</th>
-                                    <th>District</th>
-                                    <th>Thana</th>
+                                    <th>
+                                        Division<br>
+                                        District<br>
+                                        Thana<br>
+                                    </th>
                                     <th>Last Donate</th>
                                     <th>Status</th>
                                     <th>Action</th>
@@ -50,12 +53,17 @@
                                         @endif
                                     </td>
                                     <td>{{ $user->name }}</td>
+                                    <td>{{ $user->blood_group }}</td>
                                     <td>{{ $user->phone }}</td>
                                     
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->division->name }}</td>
-                                    <td>{{ $user->district->name }}</td>
-                                    <td>{{ $user->thana->name }}</td>
+                                    <td>
+                                        {{ $user->division->name }}
+                                        <hr class="m-0">
+                                        {{ $user->district->name }}
+                                        <hr class="m-0">
+                                        {{ $user->thana->name }}
+                                    </td>
                                     <td>{{date('d-m-Y', strtotime($user->donate_date)) }}</td>
                                     <td>
                                         @if($user->status == 0)

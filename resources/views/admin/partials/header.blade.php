@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>@yield('title') | Admin</title>
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo.png') }}" />
+        <link rel="shortcut icon" href="{{ asset('images/icon.png') }}" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="{{asset('backend_assets/plugins/fontawesome-free/css/all.min.css')}}">
