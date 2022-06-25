@@ -49,28 +49,28 @@
                     </div>
                     <div class="col-lg-12 card-body p-2" style="background-color: #4a950547;">
                         <div class="row">                    
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-2">
                                 <label class="mb-0">Full Name
                                     <span class="text-danger">* </span>
                                 </label>
                                 <input type="text" name="name" id="name" placeholder="Full Name" class="form-control-sm w-100 border-0 mb-1">
                                 <span class="invalid-feedback d-block" id="name_err"></span>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-2">
                                 <label class="mb-0">Date of Birth
                                     <span class="text-danger">*</span>
                                 </label>
                                 <input type="date" name="date_of_birth" id="date_of_birth" onchange="date_of_birth_change(event);" class="form-control-sm w-100 border-0 mb-1">
                                 <span class="invalid-feedback d-block" id="date_of_birth_err"></span>
                             </div>
-                            <div class="col-lg-6 col-sm-6">
+                            <div class="col-md-6 mb-2">
                                 <label class="mb-0">Mobile Number
                                     <span class="text-danger">*</span>
                                 </label>
                                 <input type="number" name="phone" id="phone" placeholder="Mobile Number" class="form-control-sm w-100 border-0 mb-1">
                                 <span class="invalid-feedback d-block" id="phone_err"></span>
                             </div>
-                            <div class="col-lg-6 col-sm-6">
+                            <div class="col-md-6 mb-2">
                                 <label class="mb-0">Email
                                     <span class="text-danger">*</span>
                                 </label>
@@ -78,7 +78,7 @@
                                 <span class="invalid-feedback d-block" id="email_err"></span>
                             </div>
               
-                            <div class="col-lg-6">
+                            <div class="col-md-6 mb-2">
                                 <label class="mb-0">Blood Group
                                     <span class="text-danger">*</span>
                                 </label>
@@ -96,7 +96,7 @@
                                 <span class="invalid-feedback d-block" id="blood_group_err"></span>
                             </div>
 
-                            <div class="col-lg-6">
+                            <div class="col-md-6 mb-2">
                                 <label class="mb-0">Gender
                                     <span class="text-danger">*</span>
                                 </label>
@@ -109,7 +109,7 @@
                                 <span class="invalid-feedback d-block" id="gender_err"></span>
                             </div>
 
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-2">
                                 <label class="mb-0">Division
                                     <span class="text-danger">*</span>
                                 </label>
@@ -123,7 +123,7 @@
                                 </select>
                                 <span class="invalid-feedback d-block" id="division_id_err"></span>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-2">
                                 <label class="mb-0">District
                                     <span class="text-danger">*</span>
                                 </label>
@@ -132,7 +132,7 @@
                                 </select>
                                 <span class="invalid-feedback d-block" id="district_id_err"></span>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-12 mb-2">
                                 <label class="mb-0">Thana
                                     <span class="text-danger">*</span>
                                 </label>
@@ -141,14 +141,14 @@
                                 </select>
                                 <span class="invalid-feedback d-block" id="thana_id_err"></span>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-2">
                                 <label class="mb-0">Password
                                     <span class="text-danger">*</span>
                                 </label>
                                 <input type="password" class="form-control-sm w-100 border-0 mb-1" name="password" id="password" autocomplete="new-password" placeholder="password">
                                 <span class="invalid-feedback d-block" id="password_err"></span>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-2">
                                 <label class="mb-0">re-type password
                                     <span class="text-danger">*</span>
                                 </label>
@@ -160,7 +160,7 @@
 
                     <div class="col-lg-12 text-center">
                         <div class="p-1">
-                            <button onclick="submit_form()" class="btn btn-success pl-5 pr-5">Sign UP</button>
+                            <button onclick="submit_form()" class="btn btn-block btn-success pl-5 pr-5">Sign UP</button>
                         </div>
                     </div>
                 </div>
